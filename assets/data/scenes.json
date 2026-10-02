@@ -1,0 +1,8913 @@
+{
+ "rooms": [
+  {
+   "id": 29,
+   "room": "livingroom",
+   "label": "Living room",
+   "view": "south",
+   "rank": 1,
+   "figure": true,
+   "kind": "living room",
+   "interior_m": [
+    5.9,
+    4.9
+   ],
+   "frame_m": [
+    6.199999999999999,
+    5.199999999999999
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_029",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_29/oursv11b.glb",
+     "glb_bytes": 292284,
+     "poster": "assets/img/rooms/scene_29/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_29/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 13,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 13,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "rack",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=sofa x=0.56 y=0.97 w=1.08 h=2.37\nOBJ class=tv_stand x=5.67 y=1.14 w=0.33 h=2.14\nOBJ class=tv x=5.81 y=1.61 w=0.14 h=1.22\nOBJ class=coffee_table x=1.93 y=2.06 w=0.98 h=0.97\nOBJ class=armchair x=3.25 y=2.17 w=0.86 h=0.88\nOBJ class=table x=3.22 y=4.18 w=1.65 h=0.82\nOBJ class=chair x=4.10 y=3.80 w=0.45 h=0.50\nOBJ class=chair x=3.54 y=3.80 w=0.45 h=0.50\nOBJ class=chair x=4.75 y=4.37 w=0.50 h=0.45\nOBJ class=chair x=2.84 y=4.37 w=0.50 h=0.45\nOBJ class=shelf x=0.17 y=2.75 w=0.37 h=1.08\nOBJ class=rack x=0.50 y=4.60 w=0.71 h=0.40\nOBJ class=floor_lamp x=0.52 y=0.40 w=0.60 h=0.60\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_29/scenesmith.glb",
+     "glb_bytes": 4498640,
+     "poster": "assets/img/rooms/scene_29/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_29/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "bookshelf",
+       2
+      ],
+      [
+       "couch",
+       2
+      ],
+      [
+       "side table",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "lounge armchair",
+       1
+      ],
+      [
+       "rug",
+       1
+      ]
+     ],
+     "scored_not_shown": 3
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_29/holodeck.glb",
+     "glb_bytes": 1008044,
+     "poster": "assets/img/rooms/scene_29/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_29/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 11,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 17,
+     "inventory": [
+      [
+       "cabinet",
+       3
+      ],
+      [
+       "shelves",
+       3
+      ],
+      [
+       "SideTable",
+       2
+      ],
+      [
+       "chair",
+       2
+      ],
+      [
+       "painting",
+       2
+      ],
+      [
+       "stool",
+       2
+      ],
+      [
+       "Painting",
+       1
+      ],
+      [
+       "bookcase",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 6
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_29/layoutvlm.glb",
+     "glb_bytes": 1771256,
+     "poster": "assets/img/rooms/scene_29/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_29/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 10.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "coffee table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "chimney",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_29/layoutgpt.glb",
+     "glb_bytes": 1529080,
+     "poster": "assets/img/rooms/scene_29/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_29/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "coffee table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "chimney",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_29/diffuscene.glb",
+     "glb_bytes": 2119608,
+     "poster": "assets/img/rooms/scene_29/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_29/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 17,
+      "lrs": -49.0,
+      "col": 0.0,
+      "oob": 73.7,
+      "fun": 100
+     },
+     "shown_objects": 19,
+     "inventory": [
+      [
+       "dining chair",
+       8
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "lounge chair",
+       2
+      ],
+      [
+       "multi seat sofa",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_29/instructscene.glb",
+     "glb_bytes": 586568,
+     "poster": "assets/img/rooms/scene_29/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_29/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 5.0,
+      "col": 33.3,
+      "oob": 0.0,
+      "fun": 0
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 3
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_29/atiss.glb",
+     "glb_bytes": 2633080,
+     "poster": "assets/img/rooms/scene_29/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_29/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 2.0,
+      "col": 50.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "multi seat sofa",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "room": "livingroom",
+   "label": "Living room",
+   "view": "south",
+   "rank": 2,
+   "figure": false,
+   "kind": "living room",
+   "interior_m": [
+    5.9,
+    4.9
+   ],
+   "frame_m": [
+    6.199999999999999,
+    5.199999999999999
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_044",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_43/oursv11b.glb",
+     "glb_bytes": 297640,
+     "poster": "assets/img/rooms/scene_43/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_43/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 13,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 13,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "rack",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=sofa x=2.35 y=1.52 w=1.08 h=2.37\nOBJ class=tv_stand x=5.71 y=1.44 w=0.33 h=2.14\nOBJ class=tv x=5.88 y=1.91 w=0.14 h=1.22\nOBJ class=coffee_table x=3.78 y=2.23 w=0.98 h=0.97\nOBJ class=armchair x=4.10 y=3.80 w=0.86 h=0.88\nOBJ class=table x=0.71 y=0.60 w=1.65 h=0.82\nOBJ class=chair x=0.33 y=0.79 w=0.50 h=0.45\nOBJ class=chair x=2.24 y=0.79 w=0.50 h=0.45\nOBJ class=chair x=1.03 y=0.22 w=0.45 h=0.50\nOBJ class=chair x=1.58 y=0.22 w=0.45 h=0.50\nOBJ class=shelf x=5.63 y=0.61 w=0.37 h=1.08\nOBJ class=rack x=0.34 y=4.65 w=0.71 h=0.40\nOBJ class=floor_lamp x=1.74 y=2.56 w=0.60 h=0.60\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_43/scenesmith.glb",
+     "glb_bytes": 6902348,
+     "poster": "assets/img/rooms/scene_43/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_43/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 16,
+      "lrs": 4.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 13,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "side table",
+       3
+      ],
+      [
+       "accent armchair",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "scored_not_shown": 3
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_43/holodeck.glb",
+     "glb_bytes": 3372900,
+     "poster": "assets/img/rooms/scene_43/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_43/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 15,
+     "inventory": [
+      [
+       "box",
+       3
+      ],
+      [
+       "table",
+       3
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "shelves",
+       2
+      ],
+      [
+       "Painting",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "painting",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 5
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_43/layoutvlm.glb",
+     "glb_bytes": 1809236,
+     "poster": "assets/img/rooms/scene_43/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_43/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 2.0,
+      "col": 40.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "coffee table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "chimney",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_43/layoutgpt.glb",
+     "glb_bytes": 1229244,
+     "poster": "assets/img/rooms/scene_43/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_43/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 7.0,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "coffee table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "chimney",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_43/diffuscene.glb",
+     "glb_bytes": 2044432,
+     "poster": "assets/img/rooms/scene_43/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_43/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "loveseat sofa",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_43/instructscene.glb",
+     "glb_bytes": 3538820,
+     "poster": "assets/img/rooms/scene_43/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_43/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": -32.0,
+      "col": 0.0,
+      "oob": 75.0,
+      "fun": 50
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "lounge chair",
+       4
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "corner side table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_43/atiss.glb",
+     "glb_bytes": 2751412,
+     "poster": "assets/img/rooms/scene_43/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_43/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": -1.0,
+      "col": 50.0,
+      "oob": 25.0,
+      "fun": 0
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "room": "livingroom",
+   "label": "Living room",
+   "view": "south",
+   "rank": 3,
+   "figure": false,
+   "kind": "living room",
+   "interior_m": [
+    5.9,
+    4.9
+   ],
+   "frame_m": [
+    6.199999999999999,
+    5.199999999999999
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_075",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_67/oursv11b.glb",
+     "glb_bytes": 314232,
+     "poster": "assets/img/rooms/scene_67/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_67/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 11,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "sofa",
+       2
+      ],
+      [
+       "tv stand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "chimney",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "tv",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=sofa x=2.01 y=3.84 w=1.77 h=1.06\nOBJ class=sofa x=4.02 y=2.13 w=1.06 h=1.66\nOBJ class=tv_stand x=0.16 y=1.62 w=0.45 h=1.87\nOBJ class=tv_stand x=0.16 y=0.67 w=0.17 h=0.94\nOBJ class=tv x=0.19 y=2.03 w=0.15 h=1.04\nOBJ class=coffee_table x=2.81 y=2.57 w=0.91 h=0.99\nOBJ class=armchair x=3.96 y=0.56 w=1.06 h=1.04\nOBJ class=chimney x=2.31 y=0.27 w=1.35 h=0.51\nOBJ class=radiator x=2.58 y=4.89 w=0.98 h=0.12\nOBJ class=rug x=2.20 y=2.08 w=2.07 h=2.64\nOBJ class=curtains x=1.93 y=4.83 w=4.12 h=0.17\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_67/scenesmith.glb",
+     "glb_bytes": 3193404,
+     "poster": "assets/img/rooms/scene_67/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_67/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "lounge chair",
+       4
+      ],
+      [
+       "end table",
+       2
+      ],
+      [
+       "bookcase",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "media console",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_67/holodeck.glb",
+     "glb_bytes": 4197192,
+     "poster": "assets/img/rooms/scene_67/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_67/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 12,
+      "lrs": 5.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 17,
+     "inventory": [
+      [
+       "Chair",
+       3
+      ],
+      [
+       "box",
+       3
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "Painting",
+       1
+      ],
+      [
+       "bench",
+       1
+      ],
+      [
+       "bookcase",
+       1
+      ],
+      [
+       "couch",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "painting",
+       1
+      ],
+      [
+       "shelves",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 5
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_67/layoutvlm.glb",
+     "glb_bytes": 1465812,
+     "poster": "assets/img/rooms/scene_67/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_67/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 7.0,
+      "col": 22.2,
+      "oob": 22.2,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "chair",
+       3
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_67/layoutgpt.glb",
+     "glb_bytes": 1567668,
+     "poster": "assets/img/rooms/scene_67/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_67/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "chair",
+       3
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_67/diffuscene.glb",
+     "glb_bytes": 2657692,
+     "poster": "assets/img/rooms/scene_67/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_67/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": -43.0,
+      "col": 26.7,
+      "oob": 86.7,
+      "fun": 0
+     },
+     "shown_objects": 15,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "corner side table",
+       3
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_67/instructscene.glb",
+     "glb_bytes": 2863068,
+     "poster": "assets/img/rooms/scene_67/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_67/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 17,
+      "lrs": -51.0,
+      "col": 10.5,
+      "oob": 42.1,
+      "fun": 100
+     },
+     "shown_objects": 19,
+     "inventory": [
+      [
+       "lounge chair",
+       4
+      ],
+      [
+       "corner side table",
+       3
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "stool",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "chaise longue sofa",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_67/atiss.glb",
+     "glb_bytes": 5546168,
+     "poster": "assets/img/rooms/scene_67/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_67/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 15,
+      "lrs": -24.0,
+      "col": 25.0,
+      "oob": 25.0,
+      "fun": 100
+     },
+     "shown_objects": 16,
+     "inventory": [
+      [
+       "dining chair",
+       6
+      ],
+      [
+       "multi seat sofa",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wine cabinet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "room": "livingroom",
+   "label": "Living room",
+   "view": "south",
+   "rank": 4,
+   "figure": false,
+   "kind": "living room",
+   "interior_m": [
+    5.5,
+    4.5
+   ],
+   "frame_m": [
+    5.8,
+    4.8
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_007",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_7/oursv11b.glb",
+     "glb_bytes": 274856,
+     "poster": "assets/img/rooms/scene_7/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_7/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 11,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "armchair",
+       2
+      ],
+      [
+       "curtains",
+       2
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=sofa x=0.16 y=1.26 w=1.02 h=2.47\nOBJ class=tv_stand x=5.15 y=1.91 w=0.48 h=1.33\nOBJ class=tv x=5.41 y=1.98 w=0.16 h=1.27\nOBJ class=coffee_table x=1.51 y=2.80 w=0.53 h=0.39\nOBJ class=armchair x=3.58 y=2.65 w=0.78 h=0.74\nOBJ class=armchair x=2.86 y=0.81 w=0.95 h=1.04\nOBJ class=chair x=0.95 y=0.70 w=0.62 h=0.57\nOBJ class=radiator x=3.98 y=4.53 w=1.13 h=0.09\nOBJ class=rug x=1.79 y=1.49 w=1.76 h=2.65\nOBJ class=curtains x=4.57 y=4.49 w=1.05 h=0.15\nOBJ class=curtains x=0.53 y=4.49 w=1.04 h=0.15\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": false
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_7/scenesmith.glb",
+     "glb_bytes": 2967208,
+     "poster": "assets/img/rooms/scene_7/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_7/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 5.0,
+      "col": 22.2,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "side table",
+       2
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "lounge armchair",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv panel",
+       1
+      ]
+     ],
+     "scored_not_shown": 1
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_7/holodeck.glb",
+     "glb_bytes": 3270004,
+     "poster": "assets/img/rooms/scene_7/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_7/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 16,
+     "inventory": [
+      [
+       "painting",
+       4
+      ],
+      [
+       "cabinet",
+       3
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "picture",
+       2
+      ],
+      [
+       "stool",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 6
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_7/layoutvlm.glb",
+     "glb_bytes": 2233196,
+     "poster": "assets/img/rooms/scene_7/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_7/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "plant",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_7/layoutgpt.glb",
+     "glb_bytes": 1004464,
+     "poster": "assets/img/rooms/scene_7/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_7/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "plant",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_7/diffuscene.glb",
+     "glb_bytes": 2960636,
+     "poster": "assets/img/rooms/scene_7/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_7/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 17,
+      "lrs": -37.0,
+      "col": 0.0,
+      "oob": 63.2,
+      "fun": 0
+     },
+     "shown_objects": 19,
+     "inventory": [
+      [
+       "armchair",
+       2
+      ],
+      [
+       "cabinet",
+       2
+      ],
+      [
+       "console table",
+       2
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "dining chair",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_7/instructscene.glb",
+     "glb_bytes": 1362404,
+     "poster": "assets/img/rooms/scene_7/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_7/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": -17.0,
+      "col": 0.0,
+      "oob": 33.3,
+      "fun": 50
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "dining chair",
+       3
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_7/atiss.glb",
+     "glb_bytes": 2689300,
+     "poster": "assets/img/rooms/scene_7/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_7/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": -9.0,
+      "col": 66.7,
+      "oob": 22.2,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "multi seat sofa",
+       3
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "room": "livingroom",
+   "label": "Living room",
+   "view": "south",
+   "rank": 5,
+   "figure": false,
+   "kind": "living room",
+   "interior_m": [
+    5.4,
+    4.4
+   ],
+   "frame_m": [
+    5.699999999999999,
+    4.699999999999999
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_076",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_68/oursv11b.glb",
+     "glb_bytes": 226636,
+     "poster": "assets/img/rooms/scene_68/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_68/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "wardrobe",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "side table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=sofa x=1.29 y=3.41 w=2.67 h=1.12\nOBJ class=tv_stand x=2.56 y=0.18 w=1.39 h=0.65\nOBJ class=tv x=2.71 y=0.38 w=1.15 h=0.15\nOBJ class=coffee_table x=2.46 y=2.28 w=0.69 h=0.68\nOBJ class=armchair x=4.02 y=1.94 w=0.82 h=0.82\nOBJ class=table x=4.05 y=3.87 w=1.48 h=0.65\nOBJ class=side_table x=3.97 y=3.43 w=0.58 h=0.42\nOBJ class=wardrobe x=4.56 y=0.18 w=0.98 h=0.66\nOBJ class=wardrobe x=0.16 y=0.18 w=0.99 h=0.66\nOBJ class=rug x=1.63 y=2.72 w=2.42 h=1.28\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_68/scenesmith.glb",
+     "glb_bytes": 2746068,
+     "poster": "assets/img/rooms/scene_68/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_68/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 5.0,
+      "col": 25.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "accent armchair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "ottoman",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "side table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv console",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_68/holodeck.glb",
+     "glb_bytes": 3789632,
+     "poster": "assets/img/rooms/scene_68/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_68/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 15,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "box",
+       3
+      ],
+      [
+       "sofa",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "Painting",
+       1
+      ],
+      [
+       "SideTable",
+       1
+      ],
+      [
+       "painting",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 5
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_68/layoutvlm.glb",
+     "glb_bytes": 2023336,
+     "poster": "assets/img/rooms/scene_68/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_68/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 8.0,
+      "col": 20.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "coffee table",
+       2
+      ],
+      [
+       "sofa",
+       2
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_68/layoutgpt.glb",
+     "glb_bytes": 1783920,
+     "poster": "assets/img/rooms/scene_68/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_68/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 6.0,
+      "col": 40.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "coffee table",
+       2
+      ],
+      [
+       "sofa",
+       2
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_68/diffuscene.glb",
+     "glb_bytes": 1942832,
+     "poster": "assets/img/rooms/scene_68/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_68/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 15,
+      "lrs": -28.0,
+      "col": 0.0,
+      "oob": 58.8,
+      "fun": 0
+     },
+     "shown_objects": 17,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "dining table",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_68/instructscene.glb",
+     "glb_bytes": 2243876,
+     "poster": "assets/img/rooms/scene_68/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_68/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 15,
+      "lrs": -25.0,
+      "col": 0.0,
+      "oob": 35.3,
+      "fun": 0
+     },
+     "shown_objects": 17,
+     "inventory": [
+      [
+       "dining chair",
+       6
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "stool",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_68/atiss.glb",
+     "glb_bytes": 1300424,
+     "poster": "assets/img/rooms/scene_68/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_68/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "l shaped sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "room": "livingroom",
+   "label": "Living room",
+   "view": "south",
+   "rank": 6,
+   "figure": false,
+   "kind": "living room",
+   "interior_m": [
+    5.4,
+    4.4
+   ],
+   "frame_m": [
+    5.699999999999999,
+    4.699999999999999
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_010",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_10/oursv11b.glb",
+     "glb_bytes": 285852,
+     "poster": "assets/img/rooms/scene_10/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_10/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "armchair",
+       2
+      ],
+      [
+       "floor lamp",
+       2
+      ],
+      [
+       "sofa",
+       2
+      ],
+      [
+       "plant",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=sofa x=1.88 y=3.66 w=2.16 h=0.87\nOBJ class=sofa x=4.28 y=2.61 w=0.84 h=1.53\nOBJ class=tv_stand x=4.08 y=0.20 w=1.28 h=0.41\nOBJ class=tv x=4.09 y=0.40 w=1.27 h=0.19\nOBJ class=armchair x=0.81 y=2.97 w=0.81 h=0.89\nOBJ class=armchair x=1.16 y=1.56 w=0.84 h=0.87\nOBJ class=table x=0.78 y=1.88 w=0.52 h=1.05\nOBJ class=plant x=0.93 y=0.51 w=0.84 h=0.82\nOBJ class=floor_lamp x=4.97 y=0.89 w=0.50 h=0.49\nOBJ class=floor_lamp x=1.00 y=0.91 w=0.50 h=0.48\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": false
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_10/scenesmith.glb",
+     "glb_bytes": 3986936,
+     "poster": "assets/img/rooms/scene_10/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_10/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "bookshelf",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "lounge chair",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "side table",
+       1
+      ],
+      [
+       "sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_10/holodeck.glb",
+     "glb_bytes": 1538288,
+     "poster": "assets/img/rooms/scene_10/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_10/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "armchair",
+       2
+      ],
+      [
+       "sofa",
+       2
+      ],
+      [
+       "SideTable",
+       1
+      ],
+      [
+       "box",
+       1
+      ],
+      [
+       "dresser",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "ottoman",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_10/layoutvlm.glb",
+     "glb_bytes": 485052,
+     "poster": "assets/img/rooms/scene_10/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_10/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 7.0,
+      "col": 28.6,
+      "oob": 28.6,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "sofa",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "pouf",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "side table",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_10/layoutgpt.glb",
+     "glb_bytes": 1630512,
+     "poster": "assets/img/rooms/scene_10/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_10/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 14.3,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "sofa",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "pouf",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "side table",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_10/diffuscene.glb",
+     "glb_bytes": 2853332,
+     "poster": "assets/img/rooms/scene_10/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_10/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 16,
+      "lrs": -26.0,
+      "col": 0.0,
+      "oob": 44.4,
+      "fun": 0
+     },
+     "shown_objects": 18,
+     "inventory": [
+      [
+       "dining chair",
+       6
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "dining table",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "loveseat sofa",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wine cabinet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_10/instructscene.glb",
+     "glb_bytes": 2021668,
+     "poster": "assets/img/rooms/scene_10/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_10/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 12,
+      "lrs": -25.0,
+      "col": 14.3,
+      "oob": 50.0,
+      "fun": 0
+     },
+     "shown_objects": 14,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "armchair",
+       2
+      ],
+      [
+       "bookshelf",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "corner side table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_10/atiss.glb",
+     "glb_bytes": 540108,
+     "poster": "assets/img/rooms/scene_10/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_10/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "l shaped sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "room": "bedroom",
+   "label": "Bedroom",
+   "view": "south",
+   "rank": 1,
+   "figure": false,
+   "kind": "bedroom",
+   "interior_m": [
+    4.4,
+    3.9
+   ],
+   "frame_m": [
+    4.699999999999999,
+    4.2
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_051",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_47/oursv11b.glb",
+     "glb_bytes": 275680,
+     "poster": "assets/img/rooms/scene_47/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_47/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "dressing table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bed x=1.53 y=0.20 w=2.04 h=2.05\nOBJ class=nightstand x=3.61 y=0.26 w=0.62 h=0.46\nOBJ class=nightstand x=0.95 y=0.30 w=0.61 h=0.45\nOBJ class=tv_stand x=1.75 y=3.63 w=1.61 h=0.41\nOBJ class=tv x=2.05 y=3.90 w=1.03 h=0.13\nOBJ class=dressing_table x=0.73 y=3.63 w=0.99 h=0.39\nOBJ class=curtains x=4.34 y=0.74 w=0.15 h=2.62\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_47/scenesmith.glb",
+     "glb_bytes": 4835808,
+     "poster": "assets/img/rooms/scene_47/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_47/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "floor lamp",
+       2
+      ],
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "scored_not_shown": 2
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_47/holodeck.glb",
+     "glb_bytes": 1418628,
+     "poster": "assets/img/rooms/scene_47/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_47/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "table",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "clock",
+       1
+      ],
+      [
+       "picture",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_47/layoutvlm.glb",
+     "glb_bytes": 1681912,
+     "poster": "assets/img/rooms/scene_47/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_47/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 42.9,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_47/layoutgpt.glb",
+     "glb_bytes": 1110092,
+     "poster": "assets/img/rooms/scene_47/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_47/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 2.0,
+      "col": 28.6,
+      "oob": 14.3,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_47/diffuscene.glb",
+     "glb_bytes": 1472656,
+     "poster": "assets/img/rooms/scene_47/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_47/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": -1.8717,
+      "col": 75.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_47/instructscene.glb",
+     "glb_bytes": 630760,
+     "poster": "assets/img/rooms/scene_47/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_47/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 3.2171,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "single bed",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_47/atiss.glb",
+     "glb_bytes": 755560,
+     "poster": "assets/img/rooms/scene_47/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_47/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -11.0,
+      "col": 83.3,
+      "oob": 50.0,
+      "fun": 50
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "room": "bedroom",
+   "label": "Bedroom",
+   "view": "south",
+   "rank": 2,
+   "figure": true,
+   "kind": "bedroom",
+   "interior_m": [
+    5.4,
+    4.4
+   ],
+   "frame_m": [
+    5.699999999999999,
+    4.699999999999999
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_022",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_22/oursv11b.glb",
+     "glb_bytes": 348324,
+     "poster": "assets/img/rooms/scene_22/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_22/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "shelf",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "dressing table",
+       1
+      ],
+      [
+       "laptop",
+       1
+      ],
+      [
+       "nightstand",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bed x=1.62 y=3.47 w=2.32 h=1.05\nOBJ class=nightstand x=1.08 y=3.95 w=0.47 h=0.55\nOBJ class=dressing_table x=0.17 y=2.48 w=0.26 h=1.59\nOBJ class=table x=4.89 y=1.32 w=0.65 h=1.75\nOBJ class=chair x=0.78 y=3.05 w=0.46 h=0.68\nOBJ class=chair x=4.24 y=1.99 w=0.57 h=0.69\nOBJ class=shelf x=0.23 y=1.47 w=0.54 h=1.01\nOBJ class=shelf x=0.20 y=0.96 w=0.53 h=0.50\nOBJ class=laptop x=4.97 y=1.89 w=0.41 h=0.39\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_22/scenesmith.glb",
+     "glb_bytes": 9794732,
+     "poster": "assets/img/rooms/scene_22/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_22/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 11,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "bedside table",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "filing cabinet",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sideboard cabinet",
+       1
+      ],
+      [
+       "task chair",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ],
+      [
+       "writing desk",
+       1
+      ]
+     ],
+     "scored_not_shown": 2
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_22/holodeck.glb",
+     "glb_bytes": 5024588,
+     "poster": "assets/img/rooms/scene_22/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_22/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 7.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "box",
+       4
+      ],
+      [
+       "cabinet",
+       3
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "shelves",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 4
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_22/layoutvlm.glb",
+     "glb_bytes": 3179676,
+     "poster": "assets/img/rooms/scene_22/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_22/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 5.0,
+      "col": 33.3,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "bench",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_22/layoutgpt.glb",
+     "glb_bytes": 1615232,
+     "poster": "assets/img/rooms/scene_22/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_22/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": -3.0,
+      "col": 22.2,
+      "oob": 33.3,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "bench",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_22/diffuscene.glb",
+     "glb_bytes": 724740,
+     "poster": "assets/img/rooms/scene_22/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_22/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -4.0,
+      "col": 83.3,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "tv stand",
+       2
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_22/instructscene.glb",
+     "glb_bytes": 435152,
+     "poster": "assets/img/rooms/scene_22/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_22/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 4.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "table",
+       2
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_22/atiss.glb",
+     "glb_bytes": 624764,
+     "poster": "assets/img/rooms/scene_22/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_22/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 2.0,
+      "col": 0.0,
+      "oob": 25.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "nightstand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "room": "bedroom",
+   "label": "Bedroom",
+   "view": "south",
+   "rank": 3,
+   "figure": false,
+   "kind": "bedroom",
+   "interior_m": [
+    4.1,
+    3.7
+   ],
+   "frame_m": [
+    4.3999999999999995,
+    4.0
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_024",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_24/oursv11b.glb",
+     "glb_bytes": 253408,
+     "poster": "assets/img/rooms/scene_24/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_24/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=bed x=2.44 y=1.05 w=1.78 h=1.89\nOBJ class=nightstand x=3.69 y=0.60 w=0.55 h=0.47\nOBJ class=nightstand x=3.69 y=2.90 w=0.53 h=0.48\nOBJ class=table x=2.18 y=0.16 w=1.28 h=0.33\nOBJ class=chair x=2.57 y=0.54 w=0.38 h=0.40\nOBJ class=coffee_table x=0.73 y=2.96 w=0.55 h=0.52\nOBJ class=curtains x=4.05 y=0.60 w=0.17 h=3.11\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_24/scenesmith.glb",
+     "glb_bytes": 3402532,
+     "poster": "assets/img/rooms/scene_24/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_24/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "bed",
+       1
+      ],
+      [
+       "bench",
+       1
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "nightstand",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "task chair",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "scored_not_shown": 1
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_24/holodeck.glb",
+     "glb_bytes": 950376,
+     "poster": "assets/img/rooms/scene_24/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_24/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "SideTable",
+       2
+      ],
+      [
+       "coatrack",
+       2
+      ],
+      [
+       "Bed",
+       1
+      ],
+      [
+       "light",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_24/layoutvlm.glb",
+     "glb_bytes": 1876520,
+     "poster": "assets/img/rooms/scene_24/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_24/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 2.0,
+      "col": 33.3,
+      "oob": 33.3,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "shelf",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_24/layoutgpt.glb",
+     "glb_bytes": 2017192,
+     "poster": "assets/img/rooms/scene_24/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_24/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": -10.0,
+      "col": 22.2,
+      "oob": 22.2,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "shelf",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_24/diffuscene.glb",
+     "glb_bytes": 2022116,
+     "poster": "assets/img/rooms/scene_24/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_24/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": -73.0,
+      "col": 36.4,
+      "oob": 81.8,
+      "fun": 0
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "wardrobe",
+       5
+      ],
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_24/instructscene.glb",
+     "glb_bytes": 629240,
+     "poster": "assets/img/rooms/scene_24/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_24/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 5.0506,
+      "col": 50.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_24/atiss.glb",
+     "glb_bytes": 1223624,
+     "poster": "assets/img/rooms/scene_24/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_24/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -15.0,
+      "col": 42.9,
+      "oob": 71.4,
+      "fun": 0
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "room": "bedroom",
+   "label": "Bedroom",
+   "view": "south",
+   "rank": 4,
+   "figure": false,
+   "kind": "bedroom",
+   "interior_m": [
+    4.4,
+    3.9
+   ],
+   "frame_m": [
+    4.699999999999999,
+    4.2
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_020",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_20/oursv11b.glb",
+     "glb_bytes": 328024,
+     "poster": "assets/img/rooms/scene_20/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_20/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 12,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "curtains",
+       2
+      ],
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "lamp",
+       1
+      ],
+      [
+       "rack",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bed x=0.17 y=1.26 w=2.03 h=1.86\nOBJ class=nightstand x=0.32 y=3.08 w=0.44 h=0.42\nOBJ class=nightstand x=0.24 y=0.81 w=0.41 h=0.37\nOBJ class=tv_stand x=4.18 y=1.37 w=0.31 h=1.91\nOBJ class=tv x=4.32 y=1.65 w=0.11 h=1.35\nOBJ class=coffee_table x=3.71 y=1.53 w=0.43 h=1.53\nOBJ class=rack x=4.22 y=3.56 w=0.31 h=0.40\nOBJ class=radiator x=1.09 y=3.94 w=0.81 h=0.11\nOBJ class=rug x=0.78 y=0.74 w=2.85 h=2.50\nOBJ class=curtains x=0.33 y=3.90 w=1.41 h=0.15\nOBJ class=curtains x=3.07 y=3.90 w=1.41 h=0.15\nOBJ class=lamp x=0.46 y=3.34 w=0.32 h=0.34\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": false
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_20/scenesmith.glb",
+     "glb_bytes": 4976868,
+     "poster": "assets/img/rooms/scene_20/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_20/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "pouf",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "toy box",
+       1
+      ],
+      [
+       "tv console",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_20/holodeck.glb",
+     "glb_bytes": 1239476,
+     "poster": "assets/img/rooms/scene_20/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_20/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "SideTable",
+       2
+      ],
+      [
+       "ToiletPaperHanger",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "painting",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_20/layoutvlm.glb",
+     "glb_bytes": 1652452,
+     "poster": "assets/img/rooms/scene_20/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_20/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 1.0,
+      "col": 42.9,
+      "oob": 28.6,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "dressing table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_20/layoutgpt.glb",
+     "glb_bytes": 1486244,
+     "poster": "assets/img/rooms/scene_20/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_20/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": -1.0,
+      "col": 28.6,
+      "oob": 14.3,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "dressing table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_20/diffuscene.glb",
+     "glb_bytes": 716748,
+     "poster": "assets/img/rooms/scene_20/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_20/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": -8.7411,
+      "col": 0.0,
+      "oob": 42.9,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_20/instructscene.glb",
+     "glb_bytes": 727868,
+     "poster": "assets/img/rooms/scene_20/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_20/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": -3.2297,
+      "col": 60.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_20/atiss.glb",
+     "glb_bytes": 572864,
+     "poster": "assets/img/rooms/scene_20/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_20/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 6.0,
+      "col": 75.0,
+      "oob": 25.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "room": "bedroom",
+   "label": "Bedroom",
+   "view": "south",
+   "rank": 5,
+   "figure": false,
+   "kind": "bedroom",
+   "interior_m": [
+    4.7,
+    4.1
+   ],
+   "frame_m": [
+    4.999999999999999,
+    4.3999999999999995
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_072",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_64/oursv11b.glb",
+     "glb_bytes": 264016,
+     "poster": "assets/img/rooms/scene_64/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_64/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "bed",
+       1
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "rack",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ],
+      [
+       "workstation",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bed x=0.88 y=0.16 w=0.96 h=2.35\nOBJ class=wardrobe x=2.77 y=3.66 w=2.08 h=0.56\nOBJ class=table x=4.11 y=0.98 w=0.66 h=1.38\nOBJ class=chair x=3.22 y=1.35 w=0.69 h=0.71\nOBJ class=rack x=0.16 y=0.55 w=0.46 h=1.01\nOBJ class=floor_lamp x=1.51 y=2.68 w=0.51 h=0.49\nOBJ class=rug x=1.43 y=0.57 w=1.97 h=2.69\nOBJ class=workstation x=4.23 y=1.22 w=0.43 h=0.79\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_64/scenesmith.glb",
+     "glb_bytes": 3651800,
+     "poster": "assets/img/rooms/scene_64/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_64/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "bedside table",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "desk chair",
+       1
+      ],
+      [
+       "storage basket",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ],
+      [
+       "writing desk",
+       1
+      ]
+     ],
+     "scored_not_shown": 1
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_64/holodeck.glb",
+     "glb_bytes": 2630208,
+     "poster": "assets/img/rooms/scene_64/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_64/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "cabinet",
+       2
+      ],
+      [
+       "shelves",
+       2
+      ],
+      [
+       "Dresser",
+       1
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "towel rack",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_64/layoutvlm.glb",
+     "glb_bytes": 988684,
+     "poster": "assets/img/rooms/scene_64/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_64/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 0.0,
+      "col": 60.0,
+      "oob": 40.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_64/layoutgpt.glb",
+     "glb_bytes": 1263952,
+     "poster": "assets/img/rooms/scene_64/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_64/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -9.0,
+      "col": 40.0,
+      "oob": 20.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_64/diffuscene.glb",
+     "glb_bytes": 1531820,
+     "poster": "assets/img/rooms/scene_64/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_64/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -5.9077,
+      "col": 62.5,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "wardrobe",
+       2
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 3
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_64/instructscene.glb",
+     "glb_bytes": 1857868,
+     "poster": "assets/img/rooms/scene_64/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_64/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": -11.0,
+      "col": 75.0,
+      "oob": 25.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_64/atiss.glb",
+     "glb_bytes": 995936,
+     "poster": "assets/img/rooms/scene_64/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_64/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -1.12,
+      "col": 33.3,
+      "oob": 16.7,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 0,
+   "room": "bedroom",
+   "label": "Bedroom",
+   "view": "south",
+   "rank": 6,
+   "figure": false,
+   "kind": "bedroom",
+   "interior_m": [
+    4.4,
+    3.9
+   ],
+   "frame_m": [
+    4.699999999999999,
+    4.2
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_000",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_0/oursv11b.glb",
+     "glb_bytes": 278908,
+     "poster": "assets/img/rooms/scene_0/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_0/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "curtains",
+       1
+      ],
+      [
+       "dressing table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bed x=1.37 y=0.20 w=2.04 h=2.06\nOBJ class=nightstand x=0.74 y=0.21 w=0.61 h=0.44\nOBJ class=nightstand x=3.40 y=0.20 w=0.63 h=0.46\nOBJ class=tv_stand x=1.44 y=3.61 w=1.61 h=0.41\nOBJ class=tv x=1.75 y=3.84 w=1.03 h=0.13\nOBJ class=dressing_table x=3.41 y=3.61 w=0.99 h=0.39\nOBJ class=curtains x=4.36 y=0.57 w=0.15 h=2.62\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_0/scenesmith.glb",
+     "glb_bytes": 3619992,
+     "poster": "assets/img/rooms/scene_0/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_0/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "bedroom bench",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "scored_not_shown": 1
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_0/holodeck.glb",
+     "glb_bytes": 2653888,
+     "poster": "assets/img/rooms/scene_0/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_0/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 50
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "box",
+       2
+      ],
+      [
+       "cabinet",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "Painting",
+       1
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "dresser",
+       1
+      ],
+      [
+       "painting",
+       1
+      ],
+      [
+       "shelves",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 4
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_0/layoutvlm.glb",
+     "glb_bytes": 1687320,
+     "poster": "assets/img/rooms/scene_0/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_0/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 71.4,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_0/layoutgpt.glb",
+     "glb_bytes": 1361204,
+     "poster": "assets/img/rooms/scene_0/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_0/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 2.0,
+      "col": 28.6,
+      "oob": 14.3,
+      "fun": 100
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "bed",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "tv",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_0/diffuscene.glb",
+     "glb_bytes": 1458076,
+     "poster": "assets/img/rooms/scene_0/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_0/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -0.3537,
+      "col": 50.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "armchair",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_0/instructscene.glb",
+     "glb_bytes": 1273172,
+     "poster": "assets/img/rooms/scene_0/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_0/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 0.5943,
+      "col": 66.7,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "double bed",
+       1
+      ],
+      [
+       "nightstand",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_0/atiss.glb",
+     "glb_bytes": 1498232,
+     "poster": "assets/img/rooms/scene_0/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_0/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": -5.0,
+      "col": 50.0,
+      "oob": 50.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "nightstand",
+       2
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "double bed",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wardrobe",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "room": "kitchen",
+   "label": "Kitchen & dining",
+   "view": "south",
+   "rank": 1,
+   "figure": false,
+   "kind": "kitchen",
+   "interior_m": [
+    4.4,
+    3.9
+   ],
+   "frame_m": [
+    4.699999999999999,
+    4.2
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_084",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_73/oursv11b.glb",
+     "glb_bytes": 208240,
+     "poster": "assets/img/rooms/scene_73/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_73/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 14,
+     "inventory": [
+      [
+       "countertop",
+       4
+      ],
+      [
+       "chair",
+       3
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "tv",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=countertop x=0.15 y=0.80 w=0.64 h=0.63\nOBJ class=countertop x=0.15 y=2.06 w=0.64 h=0.63\nOBJ class=countertop x=0.15 y=3.33 w=0.64 h=0.63\nOBJ class=countertop x=0.78 y=3.41 w=0.60 h=0.63\nOBJ class=fridge x=0.15 y=0.15 w=0.66 h=0.65\nOBJ class=stove x=0.15 y=1.43 w=0.86 h=0.63\nOBJ class=oven x=0.15 y=2.69 w=0.65 h=0.64\nOBJ class=sink x=1.38 y=3.46 w=0.63 h=0.57\nOBJ class=dishwashing_machine x=2.01 y=3.41 w=0.49 h=0.62\nOBJ class=table x=3.57 y=1.28 w=0.91 h=1.42\nOBJ class=chair x=3.19 y=1.44 w=0.50 h=0.45\nOBJ class=chair x=3.19 y=2.09 w=0.50 h=0.45\nOBJ class=chair x=3.80 y=2.58 w=0.45 h=0.50\nOBJ class=tv x=3.62 y=0.15 w=0.91 h=0.22\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_73/scenesmith.glb",
+     "glb_bytes": 21406456,
+     "poster": "assets/img/rooms/scene_73/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_73/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 11,
+      "lrs": -4.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "bar stool",
+       4
+      ],
+      [
+       "base cabinet",
+       4
+      ],
+      [
+       "bar height table",
+       1
+      ],
+      [
+       "pantry shelving unit",
+       1
+      ],
+      [
+       "refrigerator",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_73/holodeck.glb",
+     "glb_bytes": 1086368,
+     "poster": "assets/img/rooms/scene_73/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_73/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 1.08,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "highchair",
+       4
+      ],
+      [
+       "shelves",
+       2
+      ],
+      [
+       "CounterTop",
+       1
+      ],
+      [
+       "Fridge",
+       1
+      ],
+      [
+       "desk",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_73/layoutvlm.glb",
+     "glb_bytes": 757164,
+     "poster": "assets/img/rooms/scene_73/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_73/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 4.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "sink",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_73/layoutgpt.glb",
+     "glb_bytes": 941248,
+     "poster": "assets/img/rooms/scene_73/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_73/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "sink",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 91,
+   "room": "kitchen",
+   "label": "Kitchen & dining",
+   "view": "south",
+   "rank": 2,
+   "figure": false,
+   "kind": "kitchen",
+   "interior_m": [
+    4.1,
+    3.7
+   ],
+   "frame_m": [
+    4.3999999999999995,
+    4.0
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_154",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_91/oursv11b.glb",
+     "glb_bytes": 244336,
+     "poster": "assets/img/rooms/scene_91/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_91/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 14,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "countertop",
+       4
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=countertop x=0.71 y=0.15 w=0.52 h=0.53\nOBJ class=countertop x=1.76 y=0.15 w=0.52 h=0.53\nOBJ class=countertop x=3.37 y=0.15 w=0.52 h=0.53\nOBJ class=countertop x=0.17 y=0.53 w=0.54 h=1.06\nOBJ class=fridge x=0.18 y=1.59 w=0.57 h=0.53\nOBJ class=island x=1.35 y=2.09 w=2.18 h=0.81\nOBJ class=stove x=1.23 y=0.15 w=0.53 h=0.53\nOBJ class=sink x=2.29 y=0.16 w=0.54 h=0.52\nOBJ class=dishwashing_machine x=2.83 y=0.15 w=0.54 h=0.55\nOBJ class=chair x=1.38 y=2.78 w=0.48 h=0.55\nOBJ class=chair x=1.93 y=2.78 w=0.48 h=0.55\nOBJ class=chair x=2.47 y=2.78 w=0.48 h=0.55\nOBJ class=chair x=3.02 y=2.78 w=0.48 h=0.55\nOBJ class=shelf x=3.98 y=2.48 w=0.26 h=0.65\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_91/scenesmith.glb",
+     "glb_bytes": 8392304,
+     "poster": "assets/img/rooms/scene_91/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_91/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "dining chair",
+       2
+      ],
+      [
+       "bistro dining table",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "prep table",
+       1
+      ],
+      [
+       "sink base cabinet",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_91/holodeck.glb",
+     "glb_bytes": 1095576,
+     "poster": "assets/img/rooms/scene_91/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_91/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 0.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "frame",
+       3
+      ],
+      [
+       "shelves",
+       2
+      ],
+      [
+       "sink",
+       2
+      ],
+      [
+       "Fridge",
+       1
+      ],
+      [
+       "GarbageCan",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "drawer",
+       1
+      ],
+      [
+       "oven",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 3
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_91/layoutvlm.glb",
+     "glb_bytes": 1047452,
+     "poster": "assets/img/rooms/scene_91/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_91/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 1.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "sink",
+       2
+      ],
+      [
+       "countertop",
+       1
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "stove",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_91/layoutgpt.glb",
+     "glb_bytes": 2754072,
+     "poster": "assets/img/rooms/scene_91/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_91/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 1.0,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 67
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "sink",
+       2
+      ],
+      [
+       "countertop",
+       1
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "stove",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "room": "kitchen",
+   "label": "Kitchen & dining",
+   "view": "east",
+   "rank": 3,
+   "figure": true,
+   "kind": "kitchen",
+   "interior_m": [
+    3.7,
+    3.3
+   ],
+   "frame_m": [
+    4.0,
+    3.6
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_064",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_57/oursv11b.glb",
+     "glb_bytes": 198152,
+     "poster": "assets/img/rooms/scene_57/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_57/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 12,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "chair",
+       3
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=countertop x=0.79 y=0.16 w=0.60 h=0.46\nOBJ class=countertop x=1.98 y=0.16 w=0.62 h=0.59\nOBJ class=fridge x=0.15 y=0.15 w=0.64 h=0.60\nOBJ class=stove x=1.39 y=0.15 w=0.57 h=0.60\nOBJ class=sink x=2.60 y=0.15 w=0.59 h=0.59\nOBJ class=dishwashing_machine x=3.21 y=0.15 w=0.62 h=0.46\nOBJ class=cabinet x=1.98 y=0.16 w=0.62 h=0.40\nOBJ class=table x=0.59 y=2.00 w=0.92 h=0.90\nOBJ class=chair x=1.39 y=2.23 w=0.50 h=0.45\nOBJ class=chair x=0.83 y=1.62 w=0.45 h=0.50\nOBJ class=chair x=0.21 y=2.23 w=0.50 h=0.45\nOBJ class=radiator x=2.97 y=3.32 w=0.86 h=0.12\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_57/scenesmith.glb",
+     "glb_bytes": 2805244,
+     "poster": "assets/img/rooms/scene_57/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_57/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 7.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "dining chair",
+       2
+      ],
+      [
+       "base cabinet run",
+       1
+      ],
+      [
+       "bistro table",
+       1
+      ],
+      [
+       "cooking unit",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "kitchen prep cart",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_57/holodeck.glb",
+     "glb_bytes": 1141296,
+     "poster": "assets/img/rooms/scene_57/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_57/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 2.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "cabinet",
+       2
+      ],
+      [
+       "chair",
+       2
+      ],
+      [
+       "ToiletPaperHanger",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "heater",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "refrigerator",
+       1
+      ],
+      [
+       "shelves",
+       1
+      ],
+      [
+       "sink",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_57/layoutvlm.glb",
+     "glb_bytes": 1342916,
+     "poster": "assets/img/rooms/scene_57/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_57/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": -2.0,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 67
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_57/layoutgpt.glb",
+     "glb_bytes": 2083356,
+     "poster": "assets/img/rooms/scene_57/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_57/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": -9.0,
+      "col": 0.0,
+      "oob": 20.0,
+      "fun": 33
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "radiator",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "room": "kitchen",
+   "label": "Kitchen & dining",
+   "view": "south",
+   "rank": 4,
+   "figure": false,
+   "kind": "kitchen",
+   "interior_m": [
+    3.7,
+    3.5
+   ],
+   "frame_m": [
+    4.0,
+    3.8
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_065",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_58/oursv11b.glb",
+     "glb_bytes": 141324,
+     "poster": "assets/img/rooms/scene_58/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_58/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "chair",
+       3
+      ],
+      [
+       "countertop",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=countertop x=0.15 y=1.12 w=0.79 h=1.31\nOBJ class=fridge x=0.15 y=0.31 w=0.80 h=0.81\nOBJ class=stove x=0.15 y=2.43 w=0.79 h=0.81\nOBJ class=sink x=0.96 y=0.15 w=0.52 h=0.58\nOBJ class=table x=2.35 y=2.27 w=0.80 h=1.32\nOBJ class=chair x=3.03 y=2.40 w=0.50 h=0.45\nOBJ class=chair x=3.03 y=3.01 w=0.50 h=0.45\nOBJ class=chair x=2.52 y=1.89 w=0.45 h=0.50\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_58/scenesmith.glb",
+     "glb_bytes": 3497236,
+     "poster": "assets/img/rooms/scene_58/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_58/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "counter height stool",
+       2
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "pantry cabinet",
+       1
+      ],
+      [
+       "prep station island",
+       1
+      ],
+      [
+       "prep table",
+       1
+      ],
+      [
+       "range oven",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_58/holodeck.glb",
+     "glb_bytes": 1674220,
+     "poster": "assets/img/rooms/scene_58/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_58/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 7,
+      "lrs": 4.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "cabinet",
+       3
+      ],
+      [
+       "chair",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "trash can",
+       1
+      ],
+      [
+       "wall clock",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_58/layoutvlm.glb",
+     "glb_bytes": 2005984,
+     "poster": "assets/img/rooms/scene_58/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_58/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": -5.64,
+      "col": 0.0,
+      "oob": 22.2,
+      "fun": 67
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_58/layoutgpt.glb",
+     "glb_bytes": 1395352,
+     "poster": "assets/img/rooms/scene_58/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_58/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": -3.0,
+      "col": 0.0,
+      "oob": 22.2,
+      "fun": 67
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 5
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "room": "kitchen",
+   "label": "Kitchen & dining",
+   "view": "south",
+   "rank": 5,
+   "figure": false,
+   "kind": "dining room",
+   "interior_m": [
+    4.9,
+    3.9
+   ],
+   "frame_m": [
+    5.199999999999999,
+    4.2
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_156",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_93/oursv11b.glb",
+     "glb_bytes": 190700,
+     "poster": "assets/img/rooms/scene_93/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_93/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 14,
+     "inventory": [
+      [
+       "chair",
+       6
+      ],
+      [
+       "fridge",
+       2
+      ],
+      [
+       "countertop",
+       1
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=countertop x=1.31 y=0.15 w=0.58 h=0.57\nOBJ class=stove x=1.89 y=0.15 w=0.60 h=0.58\nOBJ class=oven x=0.16 y=0.15 w=0.58 h=0.62\nOBJ class=fridge x=3.59 y=0.15 w=0.57 h=0.58\nOBJ class=fridge x=0.74 y=0.15 w=0.57 h=0.58\nOBJ class=sink x=2.48 y=0.15 w=0.55 h=0.53\nOBJ class=dishwashing_machine x=3.03 y=0.15 w=0.57 h=0.57\nOBJ class=table x=3.31 y=1.39 w=0.84 h=2.45\nOBJ class=chair x=2.93 y=1.46 w=0.50 h=0.49\nOBJ class=chair x=2.93 y=2.07 w=0.50 h=0.49\nOBJ class=chair x=2.93 y=2.68 w=0.50 h=0.49\nOBJ class=chair x=4.09 y=1.46 w=0.50 h=0.49\nOBJ class=chair x=4.09 y=2.07 w=0.50 h=0.49\nOBJ class=chair x=4.09 y=2.68 w=0.50 h=0.49\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_93/scenesmith.glb",
+     "glb_bytes": 4643412,
+     "poster": "assets/img/rooms/scene_93/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_93/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 11.1,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "plant stand",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sideboard",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_93/holodeck.glb",
+     "glb_bytes": 3487324,
+     "poster": "assets/img/rooms/scene_93/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_93/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 14,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "drawer",
+       2
+      ],
+      [
+       "Fridge",
+       1
+      ],
+      [
+       "GarbageCan",
+       1
+      ],
+      [
+       "kitchen sink",
+       1
+      ],
+      [
+       "kitchen table",
+       1
+      ],
+      [
+       "light",
+       1
+      ],
+      [
+       "table",
+       1
+      ],
+      [
+       "toaster oven",
+       1
+      ],
+      [
+       "wall clock",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 4
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_93/layoutvlm.glb",
+     "glb_bytes": 1628728,
+     "poster": "assets/img/rooms/scene_93/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_93/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 12,
+      "lrs": -8.61,
+      "col": 25.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_93/layoutgpt.glb",
+     "glb_bytes": 2438512,
+     "poster": "assets/img/rooms/scene_93/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_93/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 12,
+      "lrs": -14.0,
+      "col": 25.0,
+      "oob": 25.0,
+      "fun": 67
+     },
+     "shown_objects": 12,
+     "inventory": [
+      [
+       "chair",
+       4
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_93/diffuscene.glb",
+     "glb_bytes": 1726200,
+     "poster": "assets/img/rooms/scene_93/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_93/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 13,
+      "lrs": -24.0,
+      "col": 26.7,
+      "oob": 40.0,
+      "fun": 50
+     },
+     "shown_objects": 15,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "stool",
+       3
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "bookshelf",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "l shaped sofa",
+       1
+      ],
+      [
+       "lounge chair",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_93/instructscene.glb",
+     "glb_bytes": 2866800,
+     "poster": "assets/img/rooms/scene_93/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_93/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 11,
+      "lrs": -36.0,
+      "col": 15.4,
+      "oob": 69.2,
+      "fun": 50
+     },
+     "shown_objects": 13,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "wine cabinet",
+       2
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "corner side table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_93/atiss.glb",
+     "glb_bytes": 1002504,
+     "poster": "assets/img/rooms/scene_93/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_93/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 5.0,
+      "col": 40.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "dining table",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "multi seat sofa",
+       1
+      ],
+      [
+       "round end table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "room": "kitchen",
+   "label": "Kitchen & dining",
+   "view": "south",
+   "rank": 6,
+   "figure": false,
+   "kind": "dining room",
+   "interior_m": [
+    4.9,
+    3.9
+   ],
+   "frame_m": [
+    5.199999999999999,
+    4.2
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_179",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_107/oursv11b.glb",
+     "glb_bytes": 195080,
+     "poster": "assets/img/rooms/scene_107/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_107/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 14,
+     "inventory": [
+      [
+       "chair",
+       6
+      ],
+      [
+       "fridge",
+       2
+      ],
+      [
+       "countertop",
+       1
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ],
+      [
+       "table",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=countertop x=0.16 y=1.05 w=0.58 h=0.57\nOBJ class=fridge x=0.17 y=0.48 w=0.57 h=0.58\nOBJ class=fridge x=0.17 y=3.41 w=0.57 h=0.58\nOBJ class=stove x=0.15 y=1.62 w=0.60 h=0.58\nOBJ class=oven x=0.17 y=2.20 w=0.58 h=0.62\nOBJ class=sink x=1.33 y=3.51 w=0.55 h=0.53\nOBJ class=dishwashing_machine x=0.75 y=3.47 w=0.57 h=0.57\nOBJ class=table x=3.79 y=1.04 w=0.84 h=2.45\nOBJ class=chair x=4.30 y=1.13 w=0.50 h=0.49\nOBJ class=chair x=4.30 y=1.74 w=0.50 h=0.49\nOBJ class=chair x=4.30 y=2.35 w=0.50 h=0.49\nOBJ class=chair x=3.29 y=2.35 w=0.50 h=0.49\nOBJ class=chair x=3.29 y=1.74 w=0.50 h=0.49\nOBJ class=chair x=3.29 y=1.13 w=0.50 h=0.49\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_107/scenesmith.glb",
+     "glb_bytes": 3501052,
+     "poster": "assets/img/rooms/scene_107/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_107/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "floor lamp",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "sideboard",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_107/holodeck.glb",
+     "glb_bytes": 2505056,
+     "poster": "assets/img/rooms/scene_107/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_107/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 4.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "Stool",
+       2
+      ],
+      [
+       "shelves",
+       2
+      ],
+      [
+       "table",
+       2
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "microwave oven",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "refrigerator",
+       1
+      ],
+      [
+       "toaster oven",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_107/layoutvlm.glb",
+     "glb_bytes": 1368972,
+     "poster": "assets/img/rooms/scene_107/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_107/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": -5.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_107/layoutgpt.glb",
+     "glb_bytes": 1681808,
+     "poster": "assets/img/rooms/scene_107/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_107/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 10,
+      "lrs": 2.0,
+      "col": 0.0,
+      "oob": 10.0,
+      "fun": 67
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "chair",
+       2
+      ],
+      [
+       "countertop",
+       2
+      ],
+      [
+       "dishwashing machine",
+       1
+      ],
+      [
+       "fridge",
+       1
+      ],
+      [
+       "island",
+       1
+      ],
+      [
+       "oven",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "stove",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "diffuscene",
+     "name": "DiffuScene",
+     "desc": "3D-FRONT diffusion model",
+     "glb": "assets/scenes/rooms/scene_107/diffuscene.glb",
+     "glb_bytes": 1566072,
+     "poster": "assets/img/rooms/scene_107/diffuscene.webp",
+     "poster_dark": "assets/img/rooms/scene_107/diffuscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 11.1,
+      "fun": 100
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "dining chair",
+       6
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "wine cabinet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "instructscene",
+     "name": "InstructScene",
+     "desc": "3D-FRONT graph diffusion",
+     "glb": "assets/scenes/rooms/scene_107/instructscene.glb",
+     "glb_bytes": 5319928,
+     "poster": "assets/img/rooms/scene_107/instructscene.webp",
+     "poster_dark": "assets/img/rooms/scene_107/instructscene.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 14,
+      "lrs": -56.0,
+      "col": 12.5,
+      "oob": 68.8,
+      "fun": 50
+     },
+     "shown_objects": 16,
+     "inventory": [
+      [
+       "dining chair",
+       5
+      ],
+      [
+       "corner side table",
+       2
+      ],
+      [
+       "loveseat sofa",
+       2
+      ],
+      [
+       "ceiling lamp",
+       1
+      ],
+      [
+       "coffee table",
+       1
+      ],
+      [
+       "console table",
+       1
+      ],
+      [
+       "dining table",
+       1
+      ],
+      [
+       "pendant lamp",
+       1
+      ],
+      [
+       "stool",
+       1
+      ],
+      [
+       "tv stand",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "atiss",
+     "name": "ATISS",
+     "desc": "3D-FRONT autoregressive transformer",
+     "glb": "assets/scenes/rooms/scene_107/atiss.glb",
+     "glb_bytes": 1017760,
+     "poster": "assets/img/rooms/scene_107/atiss.webp",
+     "poster_dark": "assets/img/rooms/scene_107/atiss.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 9,
+      "lrs": 0.0,
+      "col": 45.5,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 11,
+     "inventory": [
+      [
+       "dining chair",
+       4
+      ],
+      [
+       "dining table",
+       2
+      ],
+      [
+       "pendant lamp",
+       2
+      ],
+      [
+       "round end table",
+       2
+      ],
+      [
+       "multi seat sofa",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "room": "bathroom",
+   "label": "Bathroom",
+   "view": "south",
+   "rank": 1,
+   "figure": true,
+   "kind": "bathroom",
+   "interior_m": [
+    2.5,
+    2.3
+   ],
+   "frame_m": [
+    2.8,
+    2.6
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_165",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_100/oursv11b.glb",
+     "glb_bytes": 75544,
+     "poster": "assets/img/rooms/scene_100/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_100/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel warmer",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bathtub x=1.96 y=0.61 w=0.69 h=1.72\nOBJ class=toilet x=0.52 y=1.68 w=0.39 h=0.51\nOBJ class=sink x=1.23 y=2.06 w=0.72 h=0.37\nOBJ class=towel_warmer x=0.15 y=1.71 w=0.12 h=0.48\nOBJ class=plumbing_chase x=0.15 y=2.24 w=1.06 h=0.21\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_100/scenesmith.glb",
+     "glb_bytes": 1768752,
+     "poster": "assets/img/rooms/scene_100/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_100/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "base cabinet",
+       1
+      ],
+      [
+       "bath mat rug",
+       1
+      ],
+      [
+       "laundry hamper",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel ladder rack",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_100/holodeck.glb",
+     "glb_bytes": 1279776,
+     "poster": "assets/img/rooms/scene_100/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_100/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "SideTable",
+       1
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "chalkboard",
+       1
+      ],
+      [
+       "cupboard",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel rack",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_100/layoutvlm.glb",
+     "glb_bytes": 907288,
+     "poster": "assets/img/rooms/scene_100/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_100/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 7.0,
+      "col": 0.0,
+      "oob": 66.7,
+      "fun": 100
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_100/layoutgpt.glb",
+     "glb_bytes": 658616,
+     "poster": "assets/img/rooms/scene_100/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_100/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 101,
+   "room": "bathroom",
+   "label": "Bathroom",
+   "view": "south",
+   "rank": 2,
+   "figure": false,
+   "kind": "bathroom",
+   "interior_m": [
+    2.7,
+    2.3
+   ],
+   "frame_m": [
+    3.0,
+    2.6
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_166",
+   "judges": {
+    "sonnet": "scenesmith",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_101/oursv11b.glb",
+     "glb_bytes": 74108,
+     "poster": "assets/img/rooms/scene_101/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_101/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "washing machine",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=bathtub x=2.20 y=0.80 w=0.65 h=1.50\nOBJ class=toilet x=0.27 y=1.42 w=0.47 h=0.49\nOBJ class=cabinet x=1.30 y=2.21 w=0.64 h=0.24\nOBJ class=sink x=0.83 y=0.15 w=0.77 h=0.48\nOBJ class=washing_machine x=0.25 y=0.23 w=0.57 h=0.58\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_101/scenesmith.glb",
+     "glb_bytes": 4299440,
+     "poster": "assets/img/rooms/scene_101/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_101/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "bath mat",
+       1
+      ],
+      [
+       "laundry hamper",
+       1
+      ],
+      [
+       "medicine cabinet",
+       1
+      ],
+      [
+       "shower cabin",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "vanity",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_101/holodeck.glb",
+     "glb_bytes": 706580,
+     "poster": "assets/img/rooms/scene_101/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_101/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "painting",
+       2
+      ],
+      [
+       "LaundryHamper",
+       1
+      ],
+      [
+       "WashingMachine",
+       1
+      ],
+      [
+       "chalkboard",
+       1
+      ],
+      [
+       "counter",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel rack",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 4
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_101/layoutvlm.glb",
+     "glb_bytes": 105288,
+     "poster": "assets/img/rooms/scene_101/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_101/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 75.0,
+      "fun": 67
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "service void",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "washing machine",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_101/layoutgpt.glb",
+     "glb_bytes": 150076,
+     "poster": "assets/img/rooms/scene_101/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_101/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 0.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "service void",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "washing machine",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "room": "bathroom",
+   "label": "Bathroom",
+   "view": "south",
+   "rank": 3,
+   "figure": false,
+   "kind": "bathroom",
+   "interior_m": [
+    3.1,
+    2.5
+   ],
+   "frame_m": [
+    3.4,
+    2.8
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_067",
+   "judges": {
+    "sonnet": "scenesmith",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_60/oursv11b.glb",
+     "glb_bytes": 52524,
+     "poster": "assets/img/rooms/scene_60/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_60/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl": "FURNITURE\nOBJ class=bathtub x=0.15 y=1.78 w=1.83 h=0.86\nOBJ class=toilet x=2.53 y=2.16 w=0.71 h=0.47\nOBJ class=sink x=2.77 y=0.52 w=0.48 h=0.62\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": true
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_60/scenesmith.glb",
+     "glb_bytes": 1592688,
+     "poster": "assets/img/rooms/scene_60/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_60/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "bath runner",
+       1
+      ],
+      [
+       "bathroom vanity",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "tower cabinet",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_60/holodeck.glb",
+     "glb_bytes": 354136,
+     "poster": "assets/img/rooms/scene_60/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_60/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 2,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "sign",
+       1
+      ],
+      [
+       "statue (sculpture)",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_60/layoutvlm.glb",
+     "glb_bytes": 803084,
+     "poster": "assets/img/rooms/scene_60/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_60/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "cabinet",
+       2
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "service void",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_60/layoutgpt.glb",
+     "glb_bytes": 1336708,
+     "poster": "assets/img/rooms/scene_60/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_60/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": -6.0,
+      "col": 0.0,
+      "oob": 25.0,
+      "fun": 33
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "cabinet",
+       2
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "service void",
+       1
+      ],
+      [
+       "shelf",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "room": "bathroom",
+   "label": "Bathroom",
+   "view": "south",
+   "rank": 4,
+   "figure": false,
+   "kind": "bathroom",
+   "interior_m": [
+    3.1,
+    2.7
+   ],
+   "frame_m": [
+    3.4,
+    3.0
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_087",
+   "judges": {
+    "sonnet": "ours",
+    "kimi": "ours"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_76/oursv11b.glb",
+     "glb_bytes": 62712,
+     "poster": "assets/img/rooms/scene_76/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_76/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=bathtub x=1.35 y=2.03 w=1.88 h=0.82\nOBJ class=toilet x=0.40 y=1.50 w=0.53 h=0.41\nOBJ class=sink x=1.46 y=0.15 w=1.08 h=0.39\nOBJ class=plumbing_chase x=0.15 y=1.47 w=0.21 h=0.49\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": false
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_76/scenesmith.glb",
+     "glb_bytes": 3586752,
+     "poster": "assets/img/rooms/scene_76/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_76/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 9.0,
+      "col": 0.0,
+      "oob": 12.5,
+      "fun": 100
+     },
+     "shown_objects": 8,
+     "inventory": [
+      [
+       "bath stool",
+       1
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "hamper",
+       1
+      ],
+      [
+       "rug",
+       1
+      ],
+      [
+       "shelving unit",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel ladder rack",
+       1
+      ],
+      [
+       "vanity cabinet",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_76/holodeck.glb",
+     "glb_bytes": 1629404,
+     "poster": "assets/img/rooms/scene_76/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_76/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 9,
+     "inventory": [
+      [
+       "shelves",
+       4
+      ],
+      [
+       "LaundryHamper",
+       1
+      ],
+      [
+       "kitchen sink",
+       1
+      ],
+      [
+       "painting",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel rack",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 4
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_76/layoutvlm.glb",
+     "glb_bytes": 579524,
+     "poster": "assets/img/rooms/scene_76/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_76/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 25.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "radiator",
+       1
+      ],
+      [
+       "shower",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_76/layoutgpt.glb",
+     "glb_bytes": 847076,
+     "poster": "assets/img/rooms/scene_76/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_76/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 7.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "radiator",
+       1
+      ],
+      [
+       "shower",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "room": "bathroom",
+   "label": "Bathroom",
+   "view": "south",
+   "rank": 5,
+   "figure": false,
+   "kind": "bathroom",
+   "interior_m": [
+    2.9,
+    2.5
+   ],
+   "frame_m": [
+    3.1999999999999997,
+    2.8
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_086",
+   "judges": {
+    "sonnet": "scenesmith",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_75/oursv11b.glb",
+     "glb_bytes": 46380,
+     "poster": "assets/img/rooms/scene_75/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_75/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=bathtub x=2.27 y=0.85 w=0.78 h=1.78\nOBJ class=toilet x=1.47 y=1.91 w=0.38 h=0.53\nOBJ class=sink x=0.15 y=0.47 w=0.98 h=0.46\nOBJ class=plumbing_chase x=1.28 y=2.45 w=0.97 h=0.20\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": false
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_75/scenesmith.glb",
+     "glb_bytes": 2584724,
+     "poster": "assets/img/rooms/scene_75/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_75/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 5,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 5,
+     "inventory": [
+      [
+       "bathroom vanity",
+       1
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "floor basket",
+       1
+      ],
+      [
+       "laundry hamper",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_75/holodeck.glb",
+     "glb_bytes": 1078808,
+     "poster": "assets/img/rooms/scene_75/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_75/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 8,
+      "lrs": 2.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 10,
+     "inventory": [
+      [
+       "pipe",
+       2
+      ],
+      [
+       "shelves",
+       2
+      ],
+      [
+       "SideTable",
+       1
+      ],
+      [
+       "automatic washer",
+       1
+      ],
+      [
+       "box",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "poster",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 2
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_75/layoutvlm.glb",
+     "glb_bytes": 354048,
+     "poster": "assets/img/rooms/scene_75/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_75/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 7.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "pipes",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "shower",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "washing machine",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_75/layoutgpt.glb",
+     "glb_bytes": 228644,
+     "poster": "assets/img/rooms/scene_75/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_75/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": -11.0,
+      "col": 0.0,
+      "oob": 33.3,
+      "fun": 67
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "pipes",
+       1
+      ],
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "shower",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "washing machine",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  },
+  {
+   "id": 59,
+   "room": "bathroom",
+   "label": "Bathroom",
+   "view": "south",
+   "rank": 6,
+   "figure": false,
+   "kind": "bathroom",
+   "interior_m": [
+    2.9,
+    2.5
+   ],
+   "frame_m": [
+    3.1999999999999997,
+    2.8
+   ],
+   "wall_height_m": 2.6,
+   "scenesmith_source": "scene_066",
+   "judges": {
+    "sonnet": "scenesmith",
+    "kimi": "scenesmith"
+   },
+   "methods": [
+    {
+     "key": "oursv11b",
+     "name": "Architect-Ant",
+     "desc": "Gemma-4-31B · SFT + GRPO · 20 candidates ranked by LRS",
+     "glb": "assets/scenes/rooms/scene_59/oursv11b.glb",
+     "glb_bytes": 57576,
+     "poster": "assets/img/rooms/scene_59/oursv11b.webp",
+     "poster_dark": "assets/img/rooms/scene_59/oursv11b.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 4,
+      "lrs": 10.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 4,
+     "inventory": [
+      [
+       "shelf",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "washing machine",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0,
+     "dsl_label": "Layout for this room",
+     "dsl": "FURNITURE\nOBJ class=toilet x=1.70 y=0.26 w=0.61 h=0.45\nOBJ class=sink x=0.49 y=0.19 w=0.83 h=0.29\nOBJ class=washing_machine x=2.32 y=1.95 w=0.73 h=0.68\nOBJ class=shelf x=2.90 y=1.31 w=0.15 h=0.42\nEND",
+     "candidates": 20,
+     "chosen_max_raw_lrs": false
+    },
+    {
+     "key": "scenesmith",
+     "name": "SceneSmith",
+     "desc": "GPT-5.2 · released agentic scenes",
+     "glb": "assets/scenes/rooms/scene_59/scenesmith.glb",
+     "glb_bytes": 3047676,
+     "poster": "assets/img/rooms/scene_59/scenesmith.webp",
+     "poster_dark": "assets/img/rooms/scene_59/scenesmith.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 100
+     },
+     "shown_objects": 6,
+     "inventory": [
+      [
+       "bath stool",
+       1
+      ],
+      [
+       "bathroom vanity",
+       1
+      ],
+      [
+       "bathtub",
+       1
+      ],
+      [
+       "laundry hamper",
+       1
+      ],
+      [
+       "linen cabinet",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "scored_not_shown": 0
+    },
+    {
+     "key": "holodeck",
+     "name": "Holodeck",
+     "desc": "Gemma-4-31B · constraint search",
+     "glb": "assets/scenes/rooms/scene_59/holodeck.glb",
+     "glb_bytes": 795480,
+     "poster": "assets/img/rooms/scene_59/holodeck.webp",
+     "poster_dark": "assets/img/rooms/scene_59/holodeck.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 6,
+      "lrs": 6.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 33
+     },
+     "shown_objects": 7,
+     "inventory": [
+      [
+       "basket",
+       1
+      ],
+      [
+       "bookcase",
+       1
+      ],
+      [
+       "cabinet",
+       1
+      ],
+      [
+       "drawer",
+       1
+      ],
+      [
+       "shelves",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ],
+      [
+       "towel rack",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 1
+    },
+    {
+     "key": "layoutvlm",
+     "name": "LayoutVLM",
+     "desc": "Gemma-4-31B · constraint program + optimisation",
+     "glb": "assets/scenes/rooms/scene_59/layoutvlm.glb",
+     "glb_bytes": 104916,
+     "poster": "assets/img/rooms/scene_59/layoutvlm.webp",
+     "poster_dark": "assets/img/rooms/scene_59/layoutvlm.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 8.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    },
+    {
+     "key": "layoutgpt",
+     "name": "LayoutGPT",
+     "desc": "Gemma-4-31B · zero-shot CSS layout",
+     "glb": "assets/scenes/rooms/scene_59/layoutgpt.glb",
+     "glb_bytes": 137812,
+     "poster": "assets/img/rooms/scene_59/layoutgpt.webp",
+     "poster_dark": "assets/img/rooms/scene_59/layoutgpt.dark.webp",
+     "poster_size": [
+      480,
+      480
+     ],
+     "metrics": {
+      "objects": 3,
+      "lrs": 3.0,
+      "col": 0.0,
+      "oob": 0.0,
+      "fun": 67
+     },
+     "shown_objects": 3,
+     "inventory": [
+      [
+       "plumbing chase",
+       1
+      ],
+      [
+       "sink",
+       1
+      ],
+      [
+       "toilet",
+       1
+      ]
+     ],
+     "elevated_not_evaluated": 0
+    }
+   ]
+  }
+ ],
+ "houses": [
+  {
+   "id": "a",
+   "title": "Architect-Ant preferred over Holodeck",
+   "winner": "B",
+   "reason": "for its visible kitchen and clearer circulation",
+   "judge": "Claude Sonnet 5",
+   "A": {
+    "key": "holodeck_11",
+    "name": "Holodeck",
+    "house_index": 11,
+    "glb": "assets/scenes/houses/holodeck_11.glb",
+    "glb_bytes": 3018404,
+    "poster": "assets/img/houses/holodeck_11.webp",
+    "poster_size": [
+     1100,
+     809
+    ],
+    "objects": 37,
+    "rooms": 4,
+    "frame_m": [
+     12.226060493562095,
+     9.189237929836402
+    ],
+    "decimated_objects": 14,
+    "max_tris": 3000
+   },
+   "B": {
+    "key": "oursv11b_66",
+    "name": "Architect-Ant",
+    "house_index": 66,
+    "glb": "assets/scenes/houses/oursv11b_66.glb",
+    "glb_bytes": 734536,
+    "poster": "assets/img/houses/oursv11b_66.webp",
+    "poster_size": [
+     1100,
+     750
+    ],
+    "objects": 48,
+    "rooms": 7,
+    "frame_m": [
+     12.962288311132275,
+     9.007145913782368
+    ],
+    "decimated_objects": 5,
+    "max_tris": 3000
+   }
+  },
+  {
+   "id": "b",
+   "title": "Architect-Ant preferred over SceneSmith",
+   "winner": "A",
+   "reason": "for its cooking/dining setup and complete bathroom",
+   "judge": "Claude Sonnet 5",
+   "A": {
+    "key": "oursv11b_57",
+    "name": "Architect-Ant",
+    "house_index": 57,
+    "glb": "assets/scenes/houses/oursv11b_57.glb",
+    "glb_bytes": 705768,
+    "poster": "assets/img/houses/oursv11b_57.webp",
+    "poster_size": [
+     1100,
+     856
+    ],
+    "objects": 34,
+    "rooms": 6,
+    "frame_m": [
+     10.324709395619243,
+     8.064940183889421
+    ],
+    "decimated_objects": 6,
+    "max_tris": 3000
+   },
+   "B": {
+    "key": "scenesmith_8",
+    "name": "SceneSmith",
+    "house_index": 8,
+    "glb": "assets/scenes/houses/scenesmith_8.glb",
+    "glb_bytes": 2222140,
+    "poster": "assets/img/houses/scenesmith_8.webp",
+    "poster_size": [
+     1100,
+     425
+    ],
+    "objects": 14,
+    "rooms": 3,
+    "frame_m": [
+     11.05,
+     4.3500000000000005
+    ],
+    "decimated_objects": 17,
+    "max_tris": 3000
+   }
+  },
+  {
+   "id": "c",
+   "title": "SceneSmith preferred over Architect-Ant",
+   "winner": "A",
+   "reason": "for clearer circulation and separation of living and sleeping areas",
+   "judge": "Claude Sonnet 5",
+   "A": {
+    "key": "scenesmith_30",
+    "name": "SceneSmith",
+    "house_index": 30,
+    "glb": "assets/scenes/houses/scenesmith_30.glb",
+    "glb_bytes": 16648780,
+    "poster": "assets/img/houses/scenesmith_30.webp",
+    "poster_size": [
+     718,
+     1400
+    ],
+    "objects": 128,
+    "rooms": 14,
+    "frame_m": [
+     16.09,
+     31.55
+    ],
+    "decimated_objects": 214,
+    "max_tris": 3000
+   },
+   "B": {
+    "key": "oursv11b_39",
+    "name": "Architect-Ant",
+    "house_index": 39,
+    "glb": "assets/scenes/houses/oursv11b_39.glb",
+    "glb_bytes": 542948,
+    "poster": "assets/img/houses/oursv11b_39.webp",
+    "poster_size": [
+     1100,
+     1369
+    ],
+    "objects": 30,
+    "rooms": 5,
+    "frame_m": [
+     6.768172424009281,
+     8.243005763653562
+    ],
+    "decimated_objects": 3,
+    "max_tris": 3000
+   }
+  }
+ ],
+ "selection": {
+  "per_type": 6,
+  "pools": {
+   "livingroom": 32,
+   "bedroom": 31,
+   "kitchen": 40,
+   "bathroom": 6
+  },
+  "figure_rooms_selected": [
+   22,
+   29,
+   57,
+   100
+  ]
+ }
+}

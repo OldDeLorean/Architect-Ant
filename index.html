@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architect-Ant</title>
+  <meta name="description" content="Architect-Ant: editable automatic furnishing of architectural floor plans. A Gemma-4-31B layout model trained on AntPlan, 505 real professional floor plans, with SFT and GRPO against a room-aware Layout Rule Score.">
+  <meta property="og:title" content="Architect-Ant: Editable Automatic Furnishing of Architectural Floor Plans">
+  <meta property="og:description" content="Editable furniture layouts for real floor plans, learned from 505 professional drawings and refined with rule-based reinforcement learning. Explore the 3D comparisons.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://olddelorean.github.io/Architect-Ant/">
+  <meta property="og:image" content="https://olddelorean.github.io/Architect-Ant/assets/img/og.jpg">
+  <link rel="canonical" href="https://olddelorean.github.io/Architect-Ant/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ffffff">
+  <script>try { var t = localStorage.getItem('aa-theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/ArchitectAnt-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 400 400" aria-hidden="true"><rect class="logo-bg" width="400" height="400" rx="60"/><path class="logo-fg" transform="translate(62.99 286.25) scale(0.112305 -0.112305)" d="M196 0V1029L1220 1536L2244 1029V0H2052V608H1316V0H1124V608H388V0ZM388 768H1124V1265L388 901ZM2052 901 1316 1265V768H2052Z"/></svg>
+      Architect-Ant
+    </a>
+    <ul>
+      <li><a class="link" href="#explore"><span class="n">01</span>Explore</a></li>
+      <li><a class="link" href="#method"><span class="n">02</span>Method</a></li>
+      <li class="sub keep"><a class="link" href="#antplan"><span class="n">2.1</span>AntPlan</a></li>
+      <li class="sub"><a class="link" href="#layout-code"><span class="n">2.2</span>Layout code</a></li>
+      <li class="sub"><a class="link" href="#training"><span class="n">2.3</span>SFT, then GRPO</a></li>
+      <li class="sub"><a class="link" href="#lrs"><span class="n">2.4</span>Layout Rule Score</a></li>
+      <li class="sub"><a class="link" href="#inference"><span class="n">2.5</span>Inference</a></li>
+      <li><a class="link" href="#results"><span class="n">03</span>Results</a></li>
+      <li class="sub"><a class="link" href="#preference"><span class="n">3.1</span>Visual preference</a></li>
+      <li class="sub"><a class="link" href="#sft-grpo"><span class="n">3.2</span>SFT vs GRPO</a></li>
+      <li class="sub"><a class="link" href="#knowledge"><span class="n">3.3</span>Knowledge sources</a></li>
+      <li><a class="link" href="#houses"><span class="n">04</span>Houses</a></li>
+      <li class="hide-sm"><a class="link" href="#citation"><span class="n">05</span>BibTeX</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <span class="tl">Dark mode</span>
+    </button>
+    <p class="side-note">Rodionov, Cvejić, Birsak, Femiani, Wonka<br>KAUST · Miami University</p>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="eyebrow">KAUST · Miami University</div>
+  <h1>Architect-Ant</h1>
+  <p class="subtitle">Editable automatic furnishing of architectural floor plans</p>
+  <div class="authors">
+    <span>Fedor Rodionov<sup>1</sup></span>
+    <span>Aleksandar Cvejić<sup>1</sup></span>
+    <span>Michael Birsak<sup>1</sup></span>
+    <span>John Femiani<sup>2</sup></span>
+    <span>Peter Wonka<sup>1</sup></span>
+  </div>
+  <div class="affil">
+    <span><sup>1</sup>King Abdullah University of Science and Technology (KAUST)</span>
+    <span><sup>2</sup>Miami University</span>
+  </div>
+  <div class="buttons">
+    <a class="btn primary" href="https://arxiv.org/pdf/2606.10953" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+      Paper</a>
+    <a class="btn" href="#" aria-disabled="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
+      Code <span class="soon">soon</span></a>
+    <a class="btn" href="https://huggingface.co/datasets/OldDelorean/AntPlan" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+      AntPlan data</a>
+    <a class="btn" href="#explore">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 16-9 5-9-5V8l9-5 9 5z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+      3D comparison</a>
+  </div>
+  <figure class="teaser">
+    <img src="assets/img/teaser_ant.webp" width="2400" height="559" alt="Architect-Ant turns an empty structured floor plan into an editable furniture layout and a furnished 3D scene.">
+    <figcaption>Architect-Ant turns an empty structured floor plan into a furnished 3D scene through an editable, object-level layout.</figcaption>
+  </figure>
+</header>
+
+<main>
+  <section class="tldr wrap" aria-label="Summary">
+    <p>A fine-tuned vision-language model writes furniture layouts for real floor plans as short, editable code. It learns professional furnishing patterns from <b>AntPlan</b>, a collection of 505 real architectural drawings, and is then refined with reinforcement learning against a room-aware <b>Layout Rule Score</b>. It generates layouts directly, without an iterative agentic critique loop at inference.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">505</div><div class="k">professional floor plans in AntPlan, 10 room categories</div></div>
+      <div class="stat"><div class="v">92</div><div class="k">annotated furniture classes, 53 objects per plan on average</div></div>
+      <div class="stat"><div class="v">94<small>%</small></div><div class="k">functional completeness (FUN+), best of eight methods</div></div>
+      <div class="stat"><div class="v">8.80</div><div class="k">mean Layout Rule Score on 109 shared room shells, best overall</div></div>
+      <div class="stat"><div class="v">95<small>s</small></div><div class="k">estimated per room, with 20 candidates and 3D scene construction (SceneSmith: ~1,555 s)</div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ EXPLORE -->
+  <section class="block wrap" id="explore">
+    <div class="sec-head">
+      <div class="sec-num">01 — Interactive comparison</div>
+      <h2>Same room, eight methods</h2>
+      <p class="lede">Six SceneSmith room shells for each of four room types, rebuilt in 3D from the benchmark layouts with the paper's assets. Every method furnishes the same walls, doors and windows. Pick a room from a room-type menu and any two methods, then orbit and look from any angle. The two cameras stay linked.</p>
+      <p class="small muted" id="room-rule" style="max-width:var(--text);margin-top:12px"></p>
+    </div>
+
+    <div id="explorer">
+      <div class="toolbar">
+        <div class="tabs" id="room-tabs" role="group" aria-label="Room type and room"></div>
+        <div class="seg" id="room-mode" role="group" aria-label="Layout">
+          <button type="button" data-mode="split" aria-pressed="true">Side by side</button>
+          <button type="button" data-mode="single" aria-pressed="false">Single</button>
+        </div>
+      </div>
+      <p class="needs-webgl small muted" hidden>WebGL 2 is not available in this browser, so static renders are shown instead of interactive scenes.</p>
+      <div class="room-line" id="room-line"></div>
+      <noscript><p class="small muted">Enable JavaScript to explore the 3D scenes.</p></noscript>
+      <div class="stage" id="room-stage"></div>
+      <div class="strip" id="room-strip" aria-label="Methods"></div>
+      <div class="strip-note small muted">
+        <span>Click a method to load it into the highlighted panel. <kbd>←</kbd> <kbd>→</kbd> flip through methods. Walls facing the camera fade automatically.</span>
+        <span>★ ours</span>
+      </div>
+
+      <div class="details">
+        <div>
+          <h4>This room, per method</h4>
+          <div class="table-wrap" id="room-table"></div>
+        </div>
+        <div>
+          <h4 id="room-dsl-title">What Architect-Ant wrote for this room</h4>
+          <pre class="code" id="room-dsl" aria-label="Architect-Ant layout DSL"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ METHOD -->
+  <section class="block wrap" id="method">
+    <div class="sec-head">
+      <div class="sec-num">02 — Method</div>
+      <h2>Three sources of layout knowledge, combined in training</h2>
+      <p class="lede">Good furniture placement draws on examples, explicit constraints and broad world knowledge. Each source is incomplete on its own. Architect-Ant combines all three while it is trained, so that at inference a single model generates constraint-aware layouts directly.</p>
+    </div>
+    <div class="three">
+      <div><div class="n">01</div><h4>Professional layouts</h4><p>AntPlan provides supervision from real architectural drawings: object choices and arrangements that professionals actually use, including fixtures and service elements.</p></div>
+      <div><div class="n">02</div><h4>Explicit constraints</h4><p>The Layout Rule Score turns geometric and functional requirements into a deterministic reward, including containment, collisions, clearance, reachability and room-specific relations.</p></div>
+      <div><div class="n">03</div><h4>Pretrained knowledge</h4><p>Gemma-4-31B contributes broad semantic and visual understanding. A LoRA adapter per room type adapts it to floor plans and the layout language.</p></div>
+    </div>
+
+    <h3 id="antplan"><span class="tag">2.1</span>AntPlan: real professional floor plans</h3>
+    <div class="prose">
+      <p>AntPlan contains 505 residential floor-plan drawings with structural, room and furniture annotations across ten room categories and 92 object classes, with 53 objects per plan on average. Walls, doors, windows and railings are extracted with an RT-DETR-X detector trained on CubiCasa5K, and room labels are assigned manually. A furniture detector bootstrapped from a hand-labeled subset proposes objects, which are then reviewed and corrected by hand. The experiments use cleaned bedroom, bathroom, kitchen and living-room subsets with 2,259 training and 243 validation rooms. Rooms from one source plan never appear in both splits. The dataset card is on <a href="https://huggingface.co/datasets/OldDelorean/AntPlan" target="_blank" rel="noopener">Hugging Face</a>.</p>
+    </div>
+    <figure class="fig">
+      <img src="assets/img/examples_fp.webp" width="2400" height="517" loading="lazy" alt="Examples of original architectural floor-plan images from AntPlan.">
+      <figcaption>Original architectural floor-plan images from AntPlan. Each is paired with structural, room and furniture annotations.</figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/img/211_floorplan.webp" width="2400" height="707" loading="lazy" alt="An annotated AntPlan example: original drawing, structural and object boxes, and room regions.">
+      <figcaption>One annotated plan. <b>Left:</b> the original drawing. <b>Center:</b> structural and object boxes with semantic labels. <b>Right:</b> annotated room regions.</figcaption>
+    </figure>
+    <div class="table-wrap" style="margin-top:30px">
+      <table>
+        <thead><tr><th>Dataset</th><th>#&nbsp;plans</th><th style="text-align:left">Style</th><th>Room cls.</th><th>Furniture cls.</th><th>Avg. objects</th></tr></thead>
+        <tbody>
+          <tr><td>MSD</td><td>5,372</td><td style="text-align:left">Synthetic, simple boxes</td><td>9</td><td>—</td><td>—</td></tr>
+          <tr><td>ResPlan</td><td>17,000</td><td style="text-align:left">Synthetic, simple boxes</td><td>7</td><td>—</td><td>—</td></tr>
+          <tr><td>ZInD</td><td>2,737</td><td style="text-align:left">Synthetic, from 3D reconstruction</td><td>free text</td><td>—</td><td>—</td></tr>
+          <tr><td>FloorPlanCAD</td><td>2,845</td><td style="text-align:left">CAD drawings, tiled</td><td>—</td><td>30</td><td>16.73</td></tr>
+          <tr><td>SESYD</td><td>10</td><td style="text-align:left">Synthetic</td><td>—</td><td>12</td><td>17.07</td></tr>
+          <tr><td>CubiCasa5K</td><td>5,000</td><td style="text-align:left">Real, professional architectural</td><td>10</td><td>10</td><td>27.20</td></tr>
+          <tr class="ours"><td>AntPlan</td><td>505</td><td style="text-align:left">Real, professional architectural</td><td>10</td><td>92</td><td>53.01</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">FloorPlanCAD is distributed as 15,663 tiles cut from 2,845 drawings; SESYD has 10 layouts with 100 variations each; CubiCasa5K furniture classes are coarse.</p>
+
+    <h3 id="layout-code"><span class="tag">2.2</span>Layouts as editable code</h3>
+    <div class="split">
+      <div class="prose">
+        <p>A layout is a short sequence of objects, each with a class, the top-left corner of its footprint and its extents, in metres in the room's own frame. The format is compact enough to generate directly and simple to edit by hand. It lets containment, overlap and clearance be checked exactly.</p>
+        <p>Height and orientation are not predicted. When the layout becomes a 3D scene, each footprint is matched to an asset of a compatible class and size. Its height comes from the asset, and its orientation is inferred from walls and neighbouring furniture: chairs face tables, televisions face seating.</p>
+      </div>
+      <div>
+        <pre class="code" aria-label="DSL example"><span class="kw">FURNITURE</span>
+<span class="kw">OBJ</span> <span class="at">class=</span>bed <span class="at">x=</span><span class="nu">0.30</span> <span class="at">y=</span><span class="nu">0.50</span> <span class="at">w=</span><span class="nu">1.60</span> <span class="at">h=</span><span class="nu">2.00</span>
+<span class="kw">OBJ</span> <span class="at">class=</span>nightstand <span class="at">x=</span><span class="nu">1.90</span> <span class="at">y=</span><span class="nu">0.50</span> <span class="at">w=</span><span class="nu">0.50</span> <span class="at">h=</span><span class="nu">0.50</span>
+<span class="kw">END</span></pre>
+        <p class="table-note">Syntax example. The real output for each room above is shown under the viewer.</p>
+      </div>
+    </div>
+
+    <h3 id="training"><span class="tag">2.3</span>Supervised adaptation, then GRPO</h3>
+    <div class="prose">
+      <p>Gemma-4-31B-it is fine-tuned with LoRA on the language model, with the vision encoder frozen. The inputs are the room geometry as text, a structure-only raster of the room and a furniture request. The target is the final layout alone, with no reasoning traces. Reinforcement learning then starts from this checkpoint. Each rollout contains a free-form reasoning block followed by a layout, and the reward is computed <i>only</i> from the parsed final layout. The model therefore develops its own strategy for satisfying spatial requirements, following the outcome-supervision principle of DeepSeek-R1-Zero.</p>
+    </div>
+    <figure class="fig">
+      <img src="assets/img/gemma_circle.webp" width="2400" height="570" loading="lazy" alt="Data preparation and training pipeline: detection, room extraction, SFT and GRPO on Gemma 4 31B.">
+      <figcaption>Data preparation and training. Detector-assisted annotations form room-level examples for supervised fine-tuning, followed by GRPO with final-layout rewards. Each room category gets its own LoRA adapter.</figcaption>
+    </figure>
+    <dl class="kv">
+      <dt>Rollouts</dt><dd>16 responses per room, 8 rooms per update (128 on-policy rollouts), one policy-gradient step per batch</dd>
+      <dt>Advantage</dt><dd>reward centred by the room-group mean, scaled by the pooled batch standard deviation, clipped to [−2, 2]</dd>
+      <dt>Dr. GRPO</dt><dd>no per-group variance normalisation; loss normalised by a fixed 1,024-token constant</dd>
+      <dt>Schedule</dt><dd>15 updates, learning rate 2×10⁻⁵, KL coefficient 0.001 to the frozen base model, no learned critic</dd>
+    </dl>
+
+    <h3 id="lrs"><span class="tag">2.4</span>Layout Rule Score</h3>
+    <div class="split">
+      <div class="prose">
+        <p>LRS is a deterministic, room-aware score. The evaluator parses the layout and starts it at 10. It then deducts a penalty for every violated rule instance. Thirty-three rule types cover shared structural checks: containment, wall overlap and penetration, door and window obstruction, disallowed furniture overlap and accessibility. They also cover room-specific relations such as appliance mounting, kitchen runs and work zones, focal seating, window blocking, wall alignment and fixture placement.</p>
+        <p>Thresholds and exemptions are calibrated against AntPlan annotations, such as a rug beneath a bed or a sink set into a cabinet. A typical room needs 50–200 predicate evaluations. A score of 10 means no encoded rule was violated. It is not a guarantee of an ideal layout.</p>
+      </div>
+      <div>
+        <div class="formula"><i>S</i>(𝓛; <i>x</i>) = 10 − Σ<sub><i>k</i></sub> <i>p<sub>k</sub></i>(𝓛, <i>x</i>)</div>
+        <p class="table-note">During GRPO, LRS is the main outcome reward, with auxiliary terms for object-size deviation, gated similarity to the annotated layout and response validity. These terms are used only in training. At inference, the same rule scorer screens and selects among candidates.</p>
+      </div>
+    </div>
+
+    <h3 id="inference"><span class="tag">2.5</span>Inference and 3D scene construction</h3>
+    <div class="prose">
+      <p>For a new room shell, Architect-Ant retrieves the eight most similar same-type training rooms by size and samples four furniture requests from them, each specifying categories, counts and approximate sizes. It generates five layouts per request, 20 candidates in total, and the rule scorer selects one of them. The selected layout remains editable and is converted into a furnished 3D scene.</p>
+    </div>
+    <figure class="fig">
+      <img src="assets/img/inference_pipeline.webp" width="2400" height="446" loading="lazy" alt="Inference pipeline: structural input, fine-tuned Gemma, DSL output, rule-based scorer, semantic mask and 3D scene.">
+      <figcaption>Inference. The room geometry, a structure-only image and a retrieved furniture request condition the room adapter, which produces a reasoning trace and an editable layout. Layouts are scored and selected before 3D assets are retrieved and rendered.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================================================ RESULTS -->
+  <section class="block wrap" id="results">
+    <div class="sec-head">
+      <div class="sec-num">03 — Results</div>
+      <h2>Fuller rooms, fewer violations</h2>
+      <p class="lede">The benchmark uses 109 released SceneSmith room shells: 31 bedrooms, 32 living rooms, 27 dining rooms, 13 kitchens and 6 bathrooms. Architect-Ant, Holodeck, LayoutGPT and LayoutVLM share the same Gemma-4-31B backbone. SceneSmith contributes its released GPT-5.2 scenes, refined by its own agentic loop.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr class="group"><th></th><th></th><th colspan="4" class="sep">Scene statistics</th><th colspan="6" class="sep">Metrics and runtime</th></tr>
+          <tr>
+            <th>Method</th><th>Base model</th>
+            <th class="sep">Scenes</th><th>Obj./room</th><th>Obj./10 m²</th><th>Cov. %</th>
+            <th class="sep">COL+ % ↓</th><th>OOB % ↓</th><th>Acc. pairs % ↑</th><th>FUN+ % ↑</th><th>LRS ↑</th><th>Time s ↓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ATISS</td><td>Transformer</td><td class="sep">90</td><td>6.5</td><td>3.10</td><td>29.5</td><td class="sep">24.1</td><td>18.1</td><td>95.2</td><td>84</td><td>1.50</td><td>20.2</td></tr>
+          <tr><td>InstructScene</td><td>Graph diff.</td><td class="sep">90</td><td>7.2</td><td>3.15</td><td>26.3</td><td class="sep">13.7</td><td>20.9</td><td>86.9</td><td>63</td><td>−2.82</td><td>21.6</td></tr>
+          <tr><td>DiffuScene</td><td>Diffusion</td><td class="sep">90</td><td>8.0</td><td>3.47</td><td>26.5</td><td class="sep">18.1</td><td>20.8</td><td>82.7</td><td>71</td><td>−3.55</td><td>74.3</td></tr>
+          <tr><td>LayoutGPT</td><td>Gemma-4</td><td class="sep">109</td><td>7.8</td><td>4.00</td><td>21.9</td><td class="sep">8.6</td><td>8.5</td><td>97.4</td><td>84</td><td>2.10</td><td>67.7</td></tr>
+          <tr><td>LayoutVLM</td><td>Gemma-4</td><td class="sep">109</td><td>8.2</td><td>4.22</td><td>28.1</td><td class="sep">12.7</td><td>16.0</td><td>94.0</td><td>86</td><td>6.29</td><td>272.0</td></tr>
+          <tr><td>Holodeck</td><td>Gemma-4</td><td class="sep">109</td><td>9.1</td><td>4.59</td><td>34.7</td><td class="sep best">0.0</td><td class="best">0.0</td><td class="best">99.5</td><td>78</td><td>7.84</td><td>432</td></tr>
+          <tr><td>SceneSmith</td><td>GPT-5.2</td><td class="sep">109</td><td>8.9</td><td>4.50</td><td>23.4</td><td class="sep">3.4</td><td>1.3</td><td class="second">99.4</td><td class="second">91</td><td class="second">8.44</td><td>1,555</td></tr>
+          <tr class="ours"><td>Architect-Ant</td><td>Gemma-4</td><td class="sep">109</td><td>10.8</td><td>5.45</td><td>29.1</td><td class="sep second">0.6</td><td class="second">0.6</td><td>97.2</td><td class="best">94</td><td class="best">8.80</td><td>95.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Room-level means. <b>Bold</b> marks the best result and <u>underline</u> the second best among the geometric and functional metrics. Counts, coverage and runtimes are not ranked. COL+ is the fraction of objects in a disallowed collision after category-aware filtering, OOB the fraction outside the room, and FUN+ the share of required room functions served by contained, reachable objects. SceneSmith's time is an object-count-normalised estimate from its full pipeline, not a measured rerun. Timing scopes and hardware differ between methods.</p>
+
+    <div class="split" style="margin-top:56px">
+      <div>
+        <h3 id="preference" style="margin-top:0"><span class="tag">3.1</span>Blind visual preference</h3>
+        <div class="prose"><p>Two vision-language judges compare anonymous Architect-Ant and SceneSmith renders of the same shell, with randomised A/B order. Both prefer Architect-Ant overall. Their preference is strongest on kitchen and dining shells, while SceneSmith wins four of the six bathrooms.</p></div>
+        <div class="legend"><span><i class="lg-w"></i>Architect-Ant preferred</span><span><i class="lg-t"></i>Tie</span><span><i class="lg-l"></i>SceneSmith preferred</span></div>
+        <div class="room-votes">
+          <h4 id="room-judges-title">Judges' votes for the room shown above</h4>
+          <div class="judges" id="room-judges"></div>
+        </div>
+      </div>
+      <div class="pref" id="pref-bars"></div>
+    </div>
+
+    <div class="split" style="margin-top:56px">
+      <div>
+        <h3 id="sft-grpo" style="margin-top:0"><span class="tag">3.2</span>What SFT and GRPO each contribute</h3>
+        <div class="prose"><p>On the 243 held-out AntPlan rooms, each model generates eight samples per room. Only parseable, non-empty layouts are retained and scored with raw LRS. Supervised fine-tuning gives the largest jump. Reasoning GRPO on top improves both the mean and the best-of-eight score in every room type.</p></div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr class="group"><th></th><th colspan="3" class="sep">Mean LRS</th><th colspan="3" class="sep">Best of 8</th></tr>
+            <tr><th>Room</th><th class="sep">Base</th><th>SFT</th><th>+GRPO</th><th class="sep">Base</th><th>SFT</th><th>+GRPO</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Kitchen</td><td class="sep">−11.71</td><td>−0.75</td><td class="best">3.48</td><td class="sep">−2.37</td><td>5.73</td><td class="best">5.80</td></tr>
+            <tr><td>Bathroom</td><td class="sep">−0.53</td><td>6.25</td><td class="best">7.00</td><td class="sep">4.00</td><td>8.50</td><td class="best">9.00</td></tr>
+            <tr><td>Living room</td><td class="sep">2.29</td><td>5.41</td><td class="best">6.22</td><td class="sep">6.54</td><td>8.77</td><td class="best">8.95</td></tr>
+            <tr><td>Bedroom</td><td class="sep">−1.51</td><td>5.71</td><td class="best">6.02</td><td class="sep">3.89</td><td>8.48</td><td class="best">8.79</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="table-note">Base and SFT generate the layout directly. The +GRPO column adds reasoning-enabled GRPO after SFT. Confidence intervals are reported in the paper.</p>
+
+    <h3 id="knowledge"><span class="tag">3.3</span>Knowledge sources in the compared configurations</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Source</th><th>ATISS</th><th>InstructScene</th><th>DiffuScene</th><th>LayoutGPT</th><th>LayoutVLM</th><th>Holodeck</th><th>SceneSmith</th><th>Architect-Ant</th></tr></thead>
+        <tbody>
+          <tr><td>Layout examples</td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot"></i></td><td><i class="dot"></i></td><td><i class="dot"></i></td><td><i class="dot"></i></td><td><i class="dot on"></i></td></tr>
+          <tr><td>Spatial constraints</td><td><i class="dot"></i></td><td><i class="dot"></i></td><td><i class="dot on"></i></td><td><i class="dot"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td></tr>
+          <tr><td>Pretrained model knowledge</td><td><i class="dot"></i></td><td><i class="dot on"></i></td><td><i class="dot"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td><td><i class="dot on"></i></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">● used, ○ not used, in the evaluated configuration. LayoutGPT is evaluated zero-shot, without retrieved layouts.</p>
+  </section>
+
+  <!-- ============================================================ HOUSES -->
+  <section class="block wrap" id="houses">
+    <div class="sec-head">
+      <div class="sec-num">04 — Whole houses</div>
+      <h2>From rooms to complete apartments</h2>
+      <p class="lede">Architect-Ant furnishes every room of a floor plan with its room adapters. In a whole-house study, 17 selected Architect-Ant houses are each paired at random with 17 Holodeck and 17 SceneSmith houses. Judges compare anonymous top-down renders for living, circulation, cooking and eating, bathroom and sleeping functions. The three pairs below come from the paper, including one where SceneSmith was preferred.</p>
+    </div>
+    <div class="toolbar">
+      <div class="tabs" id="house-tabs" role="tablist" aria-label="House pair"></div>
+    </div>
+    <div class="stage" id="house-stage"></div>
+    <p class="caption" id="house-verdict"></p>
+
+    <div class="split" style="margin-top:44px">
+      <div class="prose">
+        <p>We selected 17 residential houses from the SceneSmith set and 17 Holodeck houses, and paired each of them with one of 17 Architect-Ant houses. The same Architect-Ant houses are used against both baselines.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Judge</th><th>vs Holodeck</th><th>vs SceneSmith</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Claude Sonnet 5</td><td>16/17 <span class="sub">94.1%</span></td><td>14/17 <span class="sub">82.4%</span></td><td><b>30/34</b> <span class="sub">88.2%</span></td></tr>
+            <tr><td>Kimi K3</td><td>17/17 <span class="sub">100%</span></td><td>15/17 <span class="sub">88.2%</span></td><td><b>32/34</b> <span class="sub">94.1%</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="table-note">Architect-Ant wins out of all judgments. <span id="house-cap-note"></span></p>
+  </section>
+
+  <!-- ============================================================ CITATION -->
+  <section class="block wrap" id="citation">
+    <div class="sec-head">
+      <div class="sec-num">05 — Citation</div>
+      <h2>BibTeX</h2>
+    </div>
+    <div class="bib">
+      <button class="copy" id="copy-bib" type="button">Copy</button>
+<pre id="bibtex">@article{rodionov2026architectant,
+  title   = {Architect-Ant: Editable Automatic Furnishing of Architectural Floor Plans},
+  author  = {Rodionov, Fedor and Cveji{\'c}, Aleksandar and Birsak, Michael and
+             Femiani, John and Wonka, Peter},
+  journal = {arXiv preprint arXiv:2606.10953},
+  year    = {2026}
+}</pre>
+    </div>
+  </section>
+  <p id="load-error" class="wrap small muted" hidden>The interactive scenes could not be loaded. If you opened this file directly from disk, serve the folder over HTTP instead (see README).</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b style="color:var(--ink)">Acknowledgments.</b> The work is supported by funding from King Abdullah University of Science and Technology (KAUST) — Center of Excellence for Generative AI, under award number 5940, and a gift from Google.</p>
+    <p>3D scenes rendered in the browser with three.js. Baseline assets retain their original sources.</p>
+  </div>
+</footer>
+
+<script>
+  // preference bars: static data from the paper (Architect-Ant wins / ties / SceneSmith wins)
+  (function () {
+    var cats = ['Bathroom', 'Bedroom', 'Kitchen / dining', 'Living room', 'Overall'];
+    var n = [6, 31, 40, 32, 109];
+    var judges = [
+      ['Claude Sonnet 5', [[2, 0, 4], [18, 1, 12], [32, 0, 8], [20, 0, 12], [72, 1, 36]]],
+      ['Kimi K3', [[2, 0, 4], [19, 0, 12], [31, 0, 9], [22, 1, 9], [74, 1, 34]]]
+    ];
+    var host = document.getElementById('pref-bars');
+    judges.forEach(function (j) {
+      var box = document.createElement('div'); box.className = 'pref-judge';
+      var t = document.createElement('h4'); t.textContent = j[0]; box.appendChild(t);
+      j[1].forEach(function (v, i) {
+        var row = document.createElement('div'); row.className = 'pref-row';
+        var total = v[0] + v[1] + v[2];
+        var seg = function (cls, k, label) {
+          if (!k) return '';
+          return '<i class="' + cls + '" style="width:' + (100 * k / total) + '%" data-tip="' + label + ': ' + k + ' of ' + total + '">' +
+            (cls === 'w' ? '<span>' + k + '</span>' : '') + '</i>';
+        };
+        row.innerHTML = '<div class="lab">' + cats[i] + '<span>n=' + n[i] + '</span></div>' +
+          '<div class="bar" role="img" aria-label="' + cats[i] + ': Architect-Ant ' + v[0] + ', tie ' + v[1] + ', SceneSmith ' + v[2] + '">' +
+          seg('w', v[0], 'Architect-Ant preferred') + seg('t', v[1], 'Tie') + seg('l', v[2], 'SceneSmith preferred') + '</div>' +
+          '<div class="val">' + v[0] + ' / ' + v[1] + ' / ' + v[2] + '</div>';
+        if (i === 4) row.style.fontWeight = '600';
+        box.appendChild(row);
+      });
+      host.appendChild(box);
+    });
+    var lrs = document.createElement('p'); lrs.className = 'table-note';
+    lrs.textContent = 'Mean LRS on the same pairs, Architect-Ant / SceneSmith: bathroom 9.00 / 9.17, bedroom 9.12 / 8.54, kitchen & dining 8.30 / 8.15, living room 9.09 / 8.56, overall 8.80 / 8.44. Automated judges, not a human study.';
+    host.appendChild(lrs);
+  })();
+</script>
+</body>
+</html>
